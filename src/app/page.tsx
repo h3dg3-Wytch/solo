@@ -1,16 +1,24 @@
 import Image from "next/image";
 import { createClient } from '@/utils/supabase/server';
+import { pipe, values, filter, propEq, map, tap, groupBy, prop} from 'ramda';
 
-export default async function Home() {
+export default function Home() {
 
-  const supabase = await createClient();
+/*   const supabase = await createClient();
   const { data, error } = await supabase.from("plot_point").select("*");
   
-  console.log("Data: ", data, "Error: ", error);
+  console.log("Data: ", data, "Error: ", error); */
+
+  // const { action, meta, mystery, social, tension }= groupBy(prop('category'))(data);
+
+
+  // console.log('Process', action, meta, mystery, social, tension);
   
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    
+    <div  className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <h1>heading</h1>
         <Image
           className="dark:invert"
           src="/next.svg"

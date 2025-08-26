@@ -1,5 +1,5 @@
-auth
-prisma
+auth - set up atuh 
+prisma - different orm
 forms
-figma
-promises?
+figma 
+promises? RAMDA 
