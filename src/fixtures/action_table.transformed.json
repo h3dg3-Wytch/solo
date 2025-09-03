@@ -1,0 +1,360 @@
+[
+  {
+    "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "description": "If this Turning Point is currently a Plotline Development, then it becomes a Plotline Conclusion. Incorporate anything necessary into this Turning Point to end this Plotline and remove it from the Plotlines List. If this Turning Point is a New Plotline or already a Conclusion, then consider this Plot Point a None.",
+    "name": "CONCLUSION"
+  },
+  {
+    "ids": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "description": "Leave this Plot Point blank and go on to the next Plot Point, unless it would leave you with fewer than 2 Plot Points in this Turning Point, in which case re-roll.",
+    "name": "NONE"
+  },
+  {
+    "ids": [
+      25,
+      26
+    ],
+    "description": "A Character is attacked, but the assailant will not attack to kill.",
+    "name": "A CHARACTER IS ATTACKED IN A NON-LETHAL WAY"
+  },
+  {
+    "ids": [
+      27
+    ],
+    "description": "Whatever is going on in this Turning Point, the activity will spill over from the focus of that activity to things around it. This is particularly true for damaging events. For instance, a superhero defeats a villain in a downtown brawl, but doing significant damage to the buildings around them in the process. The collateral damage does not have to be physical. For instance, it could be the legal fallout from a major court decision.",
+    "name": "COLLATERAL DAMAGE"
+  },
+  {
+    "ids": [
+      28,
+      29
+    ],
+    "description": "An assailant is trying to kill a Character.",
+    "name": "A CHARACTER IS ATTACKED IN A LETHAL WAY"
+  },
+  {
+    "ids": [
+      30,
+      31
+    ],
+    "description": "Whatever is happening in this Turning Point involves sudden action at an unexpected time.",
+    "name": "AMBUSH"
+  },
+  {
+    "ids": [
+      32
+    ],
+    "description": "Just about the worst thing that can happen does happen, and it happens spectacularly and with much action. This could be the impregnable fortress that gets sacked, the unstoppable superhero who gets defeated, the unsinkable ship that starts to sink.",
+    "name": "CATASTROPHE"
+  },
+  {
+    "ids": [
+      33
+    ],
+    "description": "A Character has an idea that has an impact on this Turning Point. For instance, the con man speaks up and just happens to know a secret way through the sewers into the walled city.",
+    "name": "CHARACTER HAS A CLEVER IDEA"
+  },
+  {
+    "ids": [
+      34
+    ],
+    "description": "This Turning Point involves a time limit where, at the end of it, something will get away. For instance, a ship carrying a magic artifact is about to leave the dock and a Character has to fight their way through a pack of armed goons to board the ship before it sets sail.",
+    "name": "SOMETHING IS GETTING AWAY"
+  },
+  {
+    "ids": [
+      35,
+      36
+    ],
+    "description": "A Character is being hunted by someone or something that is not strictly legitimate. In other words, as opposed to Wanted By The Law, Hunted may mean a hit man is pursuing a Character to fulfill a mafia contract on them, or a ghost may be after a Character. The hunter doesn’t have to be seeking to kill.",
+    "name": "HUNTED"
+  },
+  {
+    "ids": [
+      37
+    ],
+    "description": "A Character is distracted in this Turning Point in such a way that it impacts events. For instance, before a villain delivers his killing blow he’s distracted by an image of his lost love, giving the hero time to escape.",
+    "name": "DISTRACTION"
+  },
+  {
+    "ids": [
+      38,
+      39
+    ],
+    "description": "An assailant is attempting to abduct a Character.",
+    "name": "A CHARACTER IS ATTACKED TO ABDUCT"
+  },
+  {
+    "ids": [
+      40
+    ],
+    "description": "Whatever is happening in this Turning Point it involves an unusual or exotic element. For instance, if the Turning Point is about someone being attacked by an assassin, the assassin may have a very unusual identity or mode of attack (maybe he’s disguised as a clown and attacks with exploding balloons, or he is a martial artist with fantastic moves).",
+    "name": "SOMETHING EXOTIC"
+  },
+  {
+    "ids": [
+      41,
+      42
+    ],
+    "description": "Immediate action is required in this Turning Point, whatever is going on. For instance, if this Turning Point involves engine failure on a starship, the Character doesn’t have days to resolve the issue, he may only have an hour. Whatever is going on, it requires immediate action.",
+    "name": "IMMEDIATELY"
+  },
+  {
+    "ids": [
+      43,
+      44
+    ],
+    "description": "This Turning Point involves a chase, where one Character is pursuing another.",
+    "name": "CHASE"
+  },
+  {
+    "ids": [
+      45,
+      46
+    ],
+    "description": "This Turning Point involves an escape of some sort. For instance, a Character who was captured by brigands in an earlier Turning Point manages to slip away from his captors and escape into the forest.",
+    "name": "ESCAPE"
+  },
+  {
+    "ids": [
+      47,
+      48
+    ],
+    "description": "This Turning Point involves entering a heavily guarded and dangerous location. For instance, this could be needing to infiltrate a high tech security facility to steal information, or breaking into the necromancer's lair full of guardian zombies to destroy his magic crystal.",
+    "name": "HEAVILY GUARDED"
+  },
+  {
+    "ids": [
+      49,
+      50
+    ],
+    "description": "A Character needs to be rescued in this Turning Point.",
+    "name": "RESCUE"
+  },
+  {
+    "ids": [
+      51,
+      52
+    ],
+    "description": "This Turning Point involves Characters squaring off against each other in a physical contest of skills. This can be anything such as combat, a sporting event, duel, arm wrestling contest, etc.",
+    "name": "PHYSICAL CONTEST OF SKILLS"
+  },
+  {
+    "ids": [
+      53,
+      54
+    ],
+    "description": "This Turning Point involves a combat between many combatants. This can be a throw down between two teams or a battle in a war, for instance.",
+    "name": "MASS BATTLE"
+  },
+  {
+    "ids": [
+      55
+    ],
+    "description": "This can be an actual life support system, like the oxygen ventilation of a starship, or a safety system, like the brakes on a car. The failure will constitute an emergency for the Characters involved.",
+    "name": "A CRUCIAL LIFE SUPPORT SYSTEM BEGINS TO FAIL"
+  },
+  {
+    "ids": [
+      56,
+      57
+    ],
+    "description": "A Character achieves a victory over another Character in this Turning Point. For instance, a band of marauders successfully waylay the king’s couriers, or a hacker worms his way into a corporate computer system.",
+    "name": "VICTORY!"
+  },
+  {
+    "ids": [
+      58,
+      59
+    ],
+    "description": "A Character acts in a very risky way. For instance, a Character may suddenly show no regard for their life as they walk out across a narrow beam above a valley to save a friend. Or, the villain you are fighting takes a drug that makes him go into a battle frenzy where he loses all caution.",
+    "name": "TAKING CHANCES"
+  },
+  {
+    "ids": [
+      60,
+      61
+    ],
+    "description": "This Turning Point involves some kind of process of elimination where there is only one left. This can be a battle, but doesn’t have to be. For instance, maybe a sinking ship has a single survivor who washes up on shore, or a group of crewmen from a starship playing chess with an alien intelligence is down to their last crewmember who is now chosen for the alien’s ultimate challenge.",
+    "name": "SOLE SURVIVOR"
+  },
+  {
+    "ids": [
+      62,
+      63
+    ],
+    "description": "A Character takes action to stop something from happening in this Turning Point. The action could be expected, such as a hero putting an arrow through the executioner before he drops his axe. Or, it could be unexpected, like a Character suddenly shooting a captured villain right before he was about to reveal crucial details.",
+    "name": "STOP THAT"
+  },
+  {
+    "ids": [
+      64,
+      65
+    ],
+    "description": "This Turning Point involves a confrontation between two Characters, where another Character views it and has the option to intervene or not. The observing Character is not directly part of the confrontation, but will become so if they step in. This Plot Point calls for three Characters to be Invoked.",
+    "name": "DEFEND OR NOT TO DEFEND"
+  },
+  {
+    "ids": [
+      66,
+      67
+    ],
+    "description": "This Turning Point involves a vehicle carrying a Character to crash or threaten to crash. The Character(s) involved must either mitigate the damage of the crash, prevent the crash in the first place, and/or survive the crash. The vehicle can be anything from a plane to a car to a snow sled ... anything that can transport a Character and its crashing would be dangerous.",
+    "name": "CRASH"
+  },
+  {
+    "ids": [
+      68,
+      69
+    ],
+    "description": "A Character faces a physical barrier of some sort that must be overcome. It could be a cliff that needs to be climbed, a rickety bridge to cross, a door that needs to be knocked down, etc. Whatever the barrier is, it will require physical action to get past.",
+    "name": "PHYSICAL BARRIER TO OVERCOME"
+  },
+  {
+    "ids": [
+      70,
+      71
+    ],
+    "description": "Whatever is happening in this Turning Point, those events will intensify. For instance, if a ship is leaking on the high seas during a storm, maybe torrential winds tear down the sails.",
+    "name": "DOUBLE DOWN"
+  },
+  {
+    "ids": [
+      72,
+      73
+    ],
+    "description": "This Turning Point involves a theft, whether attempted or successful. What is being stolen is an object of some kind, or information, or anything that can be taken. This Turning Point involves the actual activity and action of the theft or attempted theft. For instance, the Character is strolling through a museum when a group of men burst in to steal a ritual mask.",
+    "name": "THEFT"
+  },
+  {
+    "ids": [
+      74,
+      75
+    ],
+    "description": "This Turning Point involves a Character having to 'fight' a calamity of some kind. For instance, maybe the Character is battling a fire to put it out, or he must fight his way through an ancient stone temple as it collapses around him.",
+    "name": "DEALING WITH A CALAMITY"
+  },
+  {
+    "ids": [
+      76,
+      77
+    ],
+    "description": "Whatever is happening in this Turning Point, it will suddenly cease. This could occur at any time and the causes may be unknown. For instance, if Characters are attacked by a group, the group may suddenly break off and run away.",
+    "name": "SUDDEN CESSATION"
+  },
+  {
+    "ids": [
+      78
+    ],
+    "description": "A resource owned or aligned with one Character is somehow turned against them in this Turning Point. For instance, a small starship is being pursued by three massive battle cruisers. By skillful piloting, the smaller ship causes the larger ships to collide with each other, using their size against them. Or, a wizard may command a powerful golem, but another wizard casts a spell to make the golem attack its master.",
+    "name": "USED AGAINST THEM"
+  },
+  {
+    "ids": [
+      79
+    ],
+    "description": "This Turning Point takes place in a traveling vehicle. For instance, a ship at sea, a train, a ship hurtling through space, etc.",
+    "name": "TRAVEL SETTING"
+  },
+  {
+    "ids": [
+      80,
+      81
+    ],
+    "description": "This Turning Point involves action coming fast and furious at a Character. It should be a rapid fire succession of action, for instance a series of attackers, an out of control boat rocketing down a rapids approaching peril after peril, running a gauntlet of some kind through a series of traps, etc.",
+    "name": "FRENETIC ACTIVITY"
+  },
+  {
+    "ids": [
+      82,
+      83
+    ],
+    "description": "A barrier needs to be overcome through stealth or dexterity. For instance, a monster lives in a cave that is only accessible by climbing a high, treacherous cliffside. Or, there are too many ninjas guarding the villain to fight your way through, but you can slip past them unseen if you are skilled enough.",
+    "name": "SNEAKY BARRIER"
+  },
+  {
+    "ids": [
+      84,
+      85
+    ],
+    "description": "Whatever else is going on in this Turning Point, it should overall be a peaceful time for a Character. For instance, there is a lull in the war where the combatants have a chance to enjoy a drink together and relax before they must fight again.",
+    "name": "A MOMENT OF PEACE"
+  },
+  {
+    "ids": [
+      86,
+      87
+    ],
+    "description": "Whatever is happening in this Turning Point that involves arriving at a location for some purpose, a Character discovers that someone else has arrived before them. For instance, a Character goes to the morgue to check out a clue and learns that another investigator already showed up and took the body.",
+    "name": "BEAT YOU TO IT"
+  },
+  {
+    "ids": [
+      88,
+      89
+    ],
+    "description": "This Turning Point involves Characters meeting in a confrontation that may turn physical if things don’t go well. For instance, a Character meets the leader of a street gang to get information, but the gang is notoriously twitchy and violent.",
+    "name": "CONFRONTATION"
+  },
+  {
+    "ids": [
+      90,
+      91
+    ],
+    "description": "A Character must protect someone or something in this Turning Point. If this is an Action Plot Point, the Character must actively protect in this Turning Point from a threat. If it is a Personal Plot Point, then the Character receives the protection duty in this Turning Point.",
+    "name": "PROTECTOR"
+  },
+  {
+    "ids": [
+      92,
+      93
+    ],
+    "description": "A series of events that has taken place in this Adventure culminates in this Turning Point. If this is early in the Adventure or in this Plotline, then instead the Adventure or Plotline gets off to a fiery start. For instance, Characters following clues to track a cult finally discover their lair, resulting in a mass battle. Or, a Plotline about retrieving a stolen gem begins with a very elaborate theft.",
+    "name": "CRESCENDO"
+  },
+  {
+    "ids": [
+      94,
+      95
+    ],
+    "description": "A Character must destroy or try to destroy something in this Turning Point. Maybe a party of dungeon delvers reaches the heart of the cavern where they must break a mystic seal.",
+    "name": "DESTROY THE THING"
+  },
+  {
+    "ids": [
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "description": "This is a special Plot Point category with Plot Points that change the Characters List or combine Plotlines. Go to the Meta Plot Points Table and roll 1d100 on it for your Plot Point.",
+    "name": "META"
+  }
+]

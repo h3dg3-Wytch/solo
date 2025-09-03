@@ -1,0 +1,144 @@
+[
+  {
+    "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "description": "A non-Player Character is completely removed from the Characters List. This can be reflected in the current Turning Point's activity, such as the character dying or exiting the story.",
+    "name": "CHARACTER EXITS THE ADVENTURE"
+  },
+  {
+    "ids": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "description": "A previously removed Character returns to the Adventure, written back into the Characters List. If no Characters can return, treat it as introducing a new Character.",
+    "name": "CHARACTER RETURNS"
+  },
+  {
+    "ids": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "description": "A Character gains another slot on the Characters List, becoming more important. If it pushes them past 3 slots, it still applies.",
+    "name": "CHARACTER STEPS UP"
+  },
+  {
+    "ids": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "description": "A Character loses one slot on the Characters List, becoming less important. If this would remove a Player Character or a 'New Character' is rolled, choose the most logical character instead.",
+    "name": "CHARACTER STEPS DOWN"
+  },
+  {
+    "ids": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+    ],
+    "description": "A Character loses two slots on the Characters List. If it would remove a Player Character or a 'New Character' is rolled, choose the most logical character instead.",
+    "name": "CHARACTER DOWNGRADE"
+  },
+  {
+    "ids": [
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82
+    ],
+    "description": "A Character gains 2 slots on the Characters List, becoming more important. If it pushes them past 3 slots, it still applies. Treat 'New Character' as 'Choose The Most Logical Character'.",
+    "name": "CHARACTER UPGRADE"
+  },
+  {
+    "ids": [
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ],
+    "description": "This Turning Point involves more than one Plotline at the same time. Roll again on the Plotlines List and add that Plotline to this Turning Point along with the original. If the same Plotline is rolled again, treat it as 'Choose The Most Logical Plotline'. If no other Plotlines are available, create a new one. Apply any 'Conclusion' to the appropriate Plotline.",
+    "name": "PLOTLINE COMBO"
+  }
+]
