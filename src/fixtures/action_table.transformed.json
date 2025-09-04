@@ -1,6 +1,6 @@
 [
   {
-    "ids": [
+    "dice_rolls": [
       1,
       2,
       3,
@@ -14,7 +14,7 @@
     "name": "CONCLUSION"
   },
   {
-    "ids": [
+    "dice_rolls": [
       9,
       10,
       11,
@@ -36,7 +36,7 @@
     "name": "NONE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       25,
       26
     ],
@@ -44,14 +44,14 @@
     "name": "A CHARACTER IS ATTACKED IN A NON-LETHAL WAY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       27
     ],
     "description": "Whatever is going on in this Turning Point, the activity will spill over from the focus of that activity to things around it. This is particularly true for damaging events. For instance, a superhero defeats a villain in a downtown brawl, but doing significant damage to the buildings around them in the process. The collateral damage does not have to be physical. For instance, it could be the legal fallout from a major court decision.",
     "name": "COLLATERAL DAMAGE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       28,
       29
     ],
@@ -59,7 +59,7 @@
     "name": "A CHARACTER IS ATTACKED IN A LETHAL WAY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       30,
       31
     ],
@@ -67,28 +67,28 @@
     "name": "AMBUSH"
   },
   {
-    "ids": [
+    "dice_rolls": [
       32
     ],
     "description": "Just about the worst thing that can happen does happen, and it happens spectacularly and with much action. This could be the impregnable fortress that gets sacked, the unstoppable superhero who gets defeated, the unsinkable ship that starts to sink.",
     "name": "CATASTROPHE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       33
     ],
     "description": "A Character has an idea that has an impact on this Turning Point. For instance, the con man speaks up and just happens to know a secret way through the sewers into the walled city.",
     "name": "CHARACTER HAS A CLEVER IDEA"
   },
   {
-    "ids": [
+    "dice_rolls": [
       34
     ],
     "description": "This Turning Point involves a time limit where, at the end of it, something will get away. For instance, a ship carrying a magic artifact is about to leave the dock and a Character has to fight their way through a pack of armed goons to board the ship before it sets sail.",
     "name": "SOMETHING IS GETTING AWAY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       35,
       36
     ],
@@ -96,14 +96,14 @@
     "name": "HUNTED"
   },
   {
-    "ids": [
+    "dice_rolls": [
       37
     ],
     "description": "A Character is distracted in this Turning Point in such a way that it impacts events. For instance, before a villain delivers his killing blow he’s distracted by an image of his lost love, giving the hero time to escape.",
     "name": "DISTRACTION"
   },
   {
-    "ids": [
+    "dice_rolls": [
       38,
       39
     ],
@@ -111,14 +111,14 @@
     "name": "A CHARACTER IS ATTACKED TO ABDUCT"
   },
   {
-    "ids": [
+    "dice_rolls": [
       40
     ],
     "description": "Whatever is happening in this Turning Point it involves an unusual or exotic element. For instance, if the Turning Point is about someone being attacked by an assassin, the assassin may have a very unusual identity or mode of attack (maybe he’s disguised as a clown and attacks with exploding balloons, or he is a martial artist with fantastic moves).",
     "name": "SOMETHING EXOTIC"
   },
   {
-    "ids": [
+    "dice_rolls": [
       41,
       42
     ],
@@ -126,7 +126,7 @@
     "name": "IMMEDIATELY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       43,
       44
     ],
@@ -134,7 +134,7 @@
     "name": "CHASE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       45,
       46
     ],
@@ -142,7 +142,7 @@
     "name": "ESCAPE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       47,
       48
     ],
@@ -150,7 +150,7 @@
     "name": "HEAVILY GUARDED"
   },
   {
-    "ids": [
+    "dice_rolls": [
       49,
       50
     ],
@@ -158,7 +158,7 @@
     "name": "RESCUE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       51,
       52
     ],
@@ -166,7 +166,7 @@
     "name": "PHYSICAL CONTEST OF SKILLS"
   },
   {
-    "ids": [
+    "dice_rolls": [
       53,
       54
     ],
@@ -174,14 +174,14 @@
     "name": "MASS BATTLE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       55
     ],
     "description": "This can be an actual life support system, like the oxygen ventilation of a starship, or a safety system, like the brakes on a car. The failure will constitute an emergency for the Characters involved.",
     "name": "A CRUCIAL LIFE SUPPORT SYSTEM BEGINS TO FAIL"
   },
   {
-    "ids": [
+    "dice_rolls": [
       56,
       57
     ],
@@ -189,7 +189,7 @@
     "name": "VICTORY!"
   },
   {
-    "ids": [
+    "dice_rolls": [
       58,
       59
     ],
@@ -197,7 +197,7 @@
     "name": "TAKING CHANCES"
   },
   {
-    "ids": [
+    "dice_rolls": [
       60,
       61
     ],
@@ -205,7 +205,7 @@
     "name": "SOLE SURVIVOR"
   },
   {
-    "ids": [
+    "dice_rolls": [
       62,
       63
     ],
@@ -213,7 +213,7 @@
     "name": "STOP THAT"
   },
   {
-    "ids": [
+    "dice_rolls": [
       64,
       65
     ],
@@ -221,7 +221,7 @@
     "name": "DEFEND OR NOT TO DEFEND"
   },
   {
-    "ids": [
+    "dice_rolls": [
       66,
       67
     ],
@@ -229,7 +229,7 @@
     "name": "CRASH"
   },
   {
-    "ids": [
+    "dice_rolls": [
       68,
       69
     ],
@@ -237,7 +237,7 @@
     "name": "PHYSICAL BARRIER TO OVERCOME"
   },
   {
-    "ids": [
+    "dice_rolls": [
       70,
       71
     ],
@@ -245,7 +245,7 @@
     "name": "DOUBLE DOWN"
   },
   {
-    "ids": [
+    "dice_rolls": [
       72,
       73
     ],
@@ -253,7 +253,7 @@
     "name": "THEFT"
   },
   {
-    "ids": [
+    "dice_rolls": [
       74,
       75
     ],
@@ -261,7 +261,7 @@
     "name": "DEALING WITH A CALAMITY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       76,
       77
     ],
@@ -269,29 +269,29 @@
     "name": "SUDDEN CESSATION"
   },
   {
-    "ids": [
+    "dice_rolls": [
       78
     ],
     "description": "A resource owned or aligned with one Character is somehow turned against them in this Turning Point. For instance, a small starship is being pursued by three massive battle cruisers. By skillful piloting, the smaller ship causes the larger ships to collide with each other, using their size against them. Or, a wizard may command a powerful golem, but another wizard casts a spell to make the golem attack its master.",
     "name": "USED AGAINST THEM"
   },
   {
-    "ids": [
+    "dice_rolls": [
       79
     ],
     "description": "This Turning Point takes place in a traveling vehicle. For instance, a ship at sea, a train, a ship hurtling through space, etc.",
     "name": "TRAVEL SETTING"
   },
   {
-    "ids": [
+    "dice_rolls": [
       80,
       81
     ],
-    "description": "This Turning Point involves action coming fast and furious at a Character. It should be a rapid fire succession of action, for instance a series of attackers, an out of control boat rocketing down a rapids approaching peril after peril, running a gauntlet of some kind through a series of traps, etc.",
+    "description": "This Turning Point involves action coming fast and furious at a Character. It should be a rapid fire succession of action, for instance a series of attackers, an out of control boat rocketing down a rapdice_rolls approaching peril after peril, running a gauntlet of some kind through a series of traps, etc.",
     "name": "FRENETIC ACTIVITY"
   },
   {
-    "ids": [
+    "dice_rolls": [
       82,
       83
     ],
@@ -299,7 +299,7 @@
     "name": "SNEAKY BARRIER"
   },
   {
-    "ids": [
+    "dice_rolls": [
       84,
       85
     ],
@@ -307,7 +307,7 @@
     "name": "A MOMENT OF PEACE"
   },
   {
-    "ids": [
+    "dice_rolls": [
       86,
       87
     ],
@@ -315,7 +315,7 @@
     "name": "BEAT YOU TO IT"
   },
   {
-    "ids": [
+    "dice_rolls": [
       88,
       89
     ],
@@ -323,7 +323,7 @@
     "name": "CONFRONTATION"
   },
   {
-    "ids": [
+    "dice_rolls": [
       90,
       91
     ],
@@ -331,7 +331,7 @@
     "name": "PROTECTOR"
   },
   {
-    "ids": [
+    "dice_rolls": [
       92,
       93
     ],
@@ -339,7 +339,7 @@
     "name": "CRESCENDO"
   },
   {
-    "ids": [
+    "dice_rolls": [
       94,
       95
     ],
@@ -347,7 +347,7 @@
     "name": "DESTROY THE THING"
   },
   {
-    "ids": [
+    "dice_rolls": [
       96,
       97,
       98,
