@@ -8,3 +8,4 @@ promises? RAMDA
 nextjs
 - read more into how it works, routes, middleware, session mangement etc
 - deploy pipeline?
+add tables to user 

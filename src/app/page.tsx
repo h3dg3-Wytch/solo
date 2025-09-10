@@ -1,18 +1,24 @@
+'use client'
 import Image from "next/image";
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/utils/supabase/client';
 import { pipe, values, filter, propEq, map, tap, groupBy, prop} from 'ramda';
+import { useEffect } from "react";
+import { AdventureCrafter } from "@/lib/adventuerCrafter";
 
 export default function Home() {
 
-/*   const supabase = await createClient();
-  const { data, error } = await supabase.from("plot_point").select("*");
-  
-  console.log("Data: ", data, "Error: ", error); */
 
-  // const { action, meta, mystery, social, tension }= groupBy(prop('category'))(data);
+  useEffect(() => {
 
+    (async () => {
 
-  // console.log('Process', action, meta, mystery, social, tension);
+      const supabase = await createClient();
+      const { data, error } = await supabase.from("plot_point").select("*");
+      
+      AdventureCrafter(data);
+
+    })();
+  }, [])
   
   return (
     
