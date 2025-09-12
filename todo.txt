@@ -8,4 +8,5 @@ promises? RAMDA
 nextjs
 - read more into how it works, routes, middleware, session mangement etc
 - deploy pipeline?
-add tables to user 
+check in on the prod server, it probably is breaking, go through the flows
+- make adventure crafter

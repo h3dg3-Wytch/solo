@@ -10,7 +10,14 @@ describe('Adventure Crafter', () => {
         const map = adventureTables(testData);
         
         expect(map[1]).toEqual(testData[0]);
-
-
     });
+    
+    // it('can be transduced', () => {
+        
+    //     const tables = r.compose(
+            
+
+    //     )
+
+    // });
 })

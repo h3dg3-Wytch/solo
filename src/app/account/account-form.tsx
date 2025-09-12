@@ -14,6 +14,9 @@ export default function AccountForm({ user }: { user: User | null }) {
     const [avatar_url, setAvatarUrl] = useState<string | null>(null)
     console.log('user', user);
 
+    const { data } = supabase.from("character").select("*").eq('userId', user?.id);
+    
+    console.log('character', data);
     /* const getProfile = useCallback(async () => {
         try {
             setLoading(true)

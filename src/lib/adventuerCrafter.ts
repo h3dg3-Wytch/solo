@@ -8,6 +8,8 @@ export function AdventureCrafter(data) {
 
     const result = map(adventureTables, grouped);
     
+    
+    
     console.log(result);
 
     const prioirty = [];
