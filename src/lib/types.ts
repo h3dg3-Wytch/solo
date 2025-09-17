@@ -1,7 +1,7 @@
 export enum THEMES {
-    ACTION,
-    SOCIAL,
-    PERSONAL,
-    TENSION,
-    MYSTERY
+    ACTION = "ACTION",
+    SOCIAL = "SOCIAL",
+    PERSONAL = "PERSONAL",
+    TENSION = "TENSION",
+    MYSTERY = "MYSTERY"
 }

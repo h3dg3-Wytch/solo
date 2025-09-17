@@ -1,29 +1,42 @@
 import { setPriority } from "os";
 import { adventureTables } from "./adventureTables";
-import {groupBy, prop, fromPairs, map} from 'ramda';
+import {groupBy, prop, fromPairs, map, } from 'ramda';
+import { THEMES } from './types';
+import { priorityTable } from  './constants';
 
-export function AdventureCrafter(data) {
+import { rollDie, shuffle } from './utils'
+
+export function AdventureCrafter(characters, plotlines, plotPoints) {
     
-    const grouped = groupBy(prop('category'), data);
+    const grouped = groupBy(prop('category'), plotPoints);
 
     const result = map(adventureTables, grouped);
     
-    
-    
-    console.log(result);
 
-    const prioirty = [];
-    const plotPoints = [];
+    let priorities = [];
+    let currentPriorityTable = null;
     
     return {
         
-        setPriority: () => { return null},
-        generateTheme: () => { return null},
-        generatePlotPoint: () => {},
-        addToTurningPoint: () => {}
+        setPriority: (prioritiesArray) => { 
+            priorities = prioritiesArray;
+            currentPriorityTable = priorityTable(...priorities);
+        },
+        generateRandomPriorityTable: () => {
+            priorities = randomThemeSelection();
+            currentPriorityTable = priorityTable(...priorities)
+            return currentPriorityTable;
+        }, 
+        generateRandomPlotPoint: () => {},
+        addToTurningPoint: () => {},
+        getCurrentPriorities: () => currentPriorityTable,
+        randomThemeSelection
     }
 
 }
+
+const randomThemeSelection = () => shuffle(Object.values(THEMES));
+
 
 export function acc() {
     return {

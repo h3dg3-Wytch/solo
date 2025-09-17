@@ -1,9 +1,9 @@
 export const ACTION = "ACTION";
-
 export const TENSION = "TENSION";
-export const PERSONAL = {};
-export const MYSTERY = ""; 
-export const SOCIAL = {};
+export const PERSONAL = "PERSONAL";
+export const MYSTERY = "MYSTERY"; 
+export const SOCIAL = "SOCIAL";
+export const META = "META";
 
 
 export const CHOOSE_MOST_LOGICAL_PLOTLINE = "Choose Most Logical Plotline";
@@ -13,18 +13,42 @@ export const CHOOSE_MOST_LOGICAL_CHARACTER= "Choose Most Logical Character";
 export const NEW_CHARACTER = "NEW CHARACTER";
 
 export const priorityTable = (
-    firstPriority: string= "",
-    secondPriority: string= "",
-    thirdPriority: string= "",
-    fourthPriority: string= "",
-    fifthPriority: string= "",
-) => ({ 
+  firstPriority: string = "",
+  secondPriority: string = "",
+  thirdPriority: string = "",
+  fourthPriority: string = "",
+  fifthPriority: string = "",
+) => {
+  const table = {
     1: firstPriority,
-    2: secondPriority,
-    3: thirdPriority,
-    4: fourthPriority,
-    5: fifthPriority 
-});
+    2: firstPriority,
+    3: firstPriority,
+    4: firstPriority,
+    5: secondPriority,
+    6: secondPriority,
+    7: thirdPriority,
+    8: thirdPriority,
+    9: thirdPriority,
+    10: fourthPriority,
+    fourthPriority,
+    fifthPriority,
+    isCurrentlyOnFourth: true,
+    getLowestPriority(): string {
+      let result = "";
+      if (this.isCurrentlyOnFourth) {
+        result = this.fourthPriority;
+      } else {
+        result = this.fifthPriority;
+      }
+      this[10] = result;
+      this.isCurrentlyOnFourth = !this.isCurrentlyOnFourth;
+      return result;
+    },
+  };
+
+  return table;
+};
+
 
 export const defaultPlotLineTable = (
     {
