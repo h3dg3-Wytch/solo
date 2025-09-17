@@ -20,7 +20,5 @@ export default async function Account() {
     console.log('character', data);
    
    
-    
-
     return <AccountForm user={user} />
 }

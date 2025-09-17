@@ -33,5 +33,4 @@ describe('Adventure Crafter', () => {
         
         expect(expected.getCurrentPriorities()[1]).toEqual(THEMES.ACTION);    
     });
-
 })

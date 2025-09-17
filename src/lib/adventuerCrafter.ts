@@ -10,7 +10,7 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
     
     const grouped = groupBy(prop('category'), plotPoints);
 
-    const result = map(adventureTables, grouped);
+    const plotPointsTable = map(adventureTables, grouped);
     
 
     let priorities = [];
@@ -27,7 +27,10 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
             currentPriorityTable = priorityTable(...priorities)
             return currentPriorityTable;
         }, 
-        generateRandomPlotPoint: () => {},
+        generateRandomPlotPoint: () => {
+            const currentlySelectedTheme = currentPriorityTable[rollDie(10)];
+            return plotPointsTable[currentlySelectedTheme.toLowerCase()][rollDie(100)];
+        },
         addToTurningPoint: () => {},
         getCurrentPriorities: () => currentPriorityTable,
         randomThemeSelection

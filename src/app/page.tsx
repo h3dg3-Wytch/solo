@@ -6,19 +6,6 @@ import { useEffect } from "react";
 import { AdventureCrafter } from "@/lib/adventuerCrafter";
 
 export default function Home() {
-
-
-  useEffect(() => {
-
-    (async () => {
-
-      const supabase = await createClient();
-      const { data, error } = await supabase.from("plot_point").select("*");
-      
-      AdventureCrafter(data);
-
-    })();
-  }, [])
   
   return (
     

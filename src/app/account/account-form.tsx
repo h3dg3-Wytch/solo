@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
+import { AdventureCrafter } from "@/lib/adventuerCrafter";
 
 // ...
 
@@ -13,11 +14,8 @@ export default function AccountForm({ user }: { user: User | null }) {
     const [website, setWebsite] = useState<string | null>(null)
     const [avatar_url, setAvatarUrl] = useState<string | null>(null)
     console.log('user', user);
-
-    const { data } = supabase.from("character").select("*").eq('userId', user?.id);
     
-    console.log('character', data);
-    /* const getProfile = useCallback(async () => {
+     /* const getProfile = useCallback(async () => {
         try {
             setLoading(true)
 
@@ -78,6 +76,25 @@ export default function AccountForm({ user }: { user: User | null }) {
             setLoading(false)
         }
     } */
+  useEffect(() => {
+
+    (async () => {
+
+      const supabase = await createClient();
+      const { data, error } = await supabase.from("plot_point").select("*");
+      
+      console.log(data);
+      
+      const expected = AdventureCrafter([], [], data);
+      expected.generateRandomPriorityTable();
+      
+      console.log('plotPoint', expected.generateRandomPlotPoint())
+      
+
+
+    })();
+  }, [])
+   
 
     return (
         <div className="form-widget">
