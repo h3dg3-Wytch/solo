@@ -18,6 +18,7 @@ export const priorityTable = (
   thirdPriority: string = "",
   fourthPriority: string = "",
   fifthPriority: string = "",
+  isCurrentlyOnFourth: boolean = true
 ) => {
   const table = {
     1: firstPriority,
@@ -29,25 +30,29 @@ export const priorityTable = (
     7: thirdPriority,
     8: thirdPriority,
     9: thirdPriority,
-    10: fourthPriority,
+    10: isCurrentlyOnFourth ? fourthPriority : fifthPriority,
+    firstPriority,
+    secondPriority,
+    thirdPriority,
     fourthPriority,
     fifthPriority,
-    isCurrentlyOnFourth: true,
-    getLowestPriority(): string {
-      let result = "";
-      if (this.isCurrentlyOnFourth) {
-        result = this.fourthPriority;
-      } else {
-        result = this.fifthPriority;
-      }
-      this[10] = result;
-      this.isCurrentlyOnFourth = !this.isCurrentlyOnFourth;
-      return result;
-    },
-  };
+    isCurrentlyOnFourth
+  }
 
   return table;
 };
+
+export function toggleLowestPriorityTheme(table) {
+
+    return priorityTable(table.firstPriority,
+        table.secondPriority,
+        table.thirdPriority,
+        table.fourthPriority,
+        table.fifthPriority,
+        !table.isCurrentlyOnFourth
+    )
+}
+    
 
 
 export const defaultPlotLineTable = (

@@ -28,7 +28,9 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
             return currentPriorityTable;
         }, 
         generateRandomPlotPoint: () => {
-            const currentlySelectedTheme = currentPriorityTable[rollDie(10)];
+            
+            const dieRoll = rollDie(10);
+            const currentlySelectedTheme = (dieRoll !== 10 ) ? currentPriorityTable[rollDie(10)]: currentPriorityTable.getLowestPriority();
             return plotPointsTable[currentlySelectedTheme.toLowerCase()][rollDie(100)];
         },
         addToTurningPoint: () => {},
