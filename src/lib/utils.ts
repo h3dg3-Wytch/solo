@@ -12,10 +12,8 @@ export function rollDie(sides) {
   return randomNumberBetween(sides, 1);
 }
 
-export function randomNumberBetween(range, floor) {
-
-  return Math.floor(Math.random() * range) + floor;
-  
+export function randomNumberBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export function shuffle<T>(array: T[]): T[] {

@@ -16,28 +16,21 @@ jest.mock('../lib/utils', () => ({
   randomNumberBetween:jest.fn()
 }));
 
-
-
 describe('Character Table', () => {
 
     it('can randomly generate characters', () => {
-
         (utils.rollDie as jest.Mock).mockReturnValue(1); 
         (utils.randomNumberBetween as jest.Mock).mockReturnValue(100); 
         
         const actual = CharacterTable(characterSpecialTraits, characterIdentiy, characterDescriptors);
         
         const expected = actual.specialTraits[1];
-
+        
         expect(generateSpecialTrait(actual)).toEqual(expected);
         
         expect(generateRandomCharacter(actual).trait.roll).toEqual(1);
         expect(generateRandomCharacter(actual).identity[0].roll).toEqual(1);
         expect(generateRandomCharacter(actual).descriptor[0].roll).toEqual(1);
-        
-         
-
-        
     });
     
 })

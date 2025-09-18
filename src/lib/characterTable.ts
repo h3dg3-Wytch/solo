@@ -21,33 +21,13 @@ export const generateRandomCharacter = (characterTable) => ({
     
 })
 
-// to do clean this up and refactor
-/* const generateRandomEntry = (table: any[], threshold: number) => {
-  const dieRoll = rollDie(100);
-
-  const first = chooseFromCharacterTable(dieRoll, table);
-
-  if (dieRoll <= threshold) {
-    const second = chooseFromCharacterTable(randomNumberBetween(threshold + 1, 100), table);
-    return [first, second];
-  }
-
-  return [first];
-};
- */
-export const generateRandomDescriptor = (characterTable) => {
-    const dieRoll = rollDie(100);
-    return (dieRoll <= 21) 
-        ? [chooseFromCharacterTable(dieRoll, characterTable.descriptors), chooseFromCharacterTable(randomNumberBetween(34, 100), characterTable.descriptors)]
-        : [chooseFromCharacterTable(dieRoll, characterTable.descriptors)]
-
-}
-export const generateRandomIdentity = (characterTable) => { 
-    const dieRoll = rollDie(100);
-    return (dieRoll <= 33) 
-        ? [chooseFromCharacterTable(dieRoll, characterTable.identity), chooseFromCharacterTable(randomNumberBetween(34, 100), characterTable.identity)]
-        : [chooseFromCharacterTable(dieRoll, characterTable.identity)]
-    
-};
+export const generateRandomDescriptor = (characterTable) => generateRandomEntry(rollDie(100), 21, characterTable.descriptors); 
+export const generateRandomIdentity = (characterTable) => generateRandomEntry(rollDie(100), 33, characterTable.identity);
 export const generateSpecialTrait = (characterTable) => chooseFromCharacterTable(rollDie(100), characterTable.specialTraits);
+export const generateRandomEntry = (dieRoll, threshold, table) => {
+    return (dieRoll <= threshold) 
+        ? [chooseFromCharacterTable(dieRoll, table), chooseFromCharacterTable(randomNumberBetween(threshold + 1, 100), table), chooseFromCharacterTable(randomNumberBetween(threshold + 1, 100), table)]
+        : [chooseFromCharacterTable(dieRoll, table)]
+    
+}
 export const chooseFromCharacterTable = (die, table) => table[die];
