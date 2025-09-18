@@ -9,7 +9,13 @@ export function rollDie(sides) {
     throw new Error("Number of sides must be a positive integer.");
   }
 
-  return Math.floor(Math.random() * sides) + 1;
+  return randomNumberBetween(sides, 1);
+}
+
+export function randomNumberBetween(range, floor) {
+
+  return Math.floor(Math.random() * range) + floor;
+  
 }
 
 export function shuffle<T>(array: T[]): T[] {

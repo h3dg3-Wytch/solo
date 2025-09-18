@@ -12,7 +12,8 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
 
     const plotPointsTable = map(adventureTables, grouped);
     
-
+    // set turning point 
+    let turningPoints = [];
     let priorities = [];
     let currentPriorityTable = null;
     
@@ -27,13 +28,10 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
             currentPriorityTable = priorityTable(...priorities)
             return currentPriorityTable;
         }, 
-        generateRandomPlotPoint: () => {
-            
-            const dieRoll = rollDie(10);
+        generateRandomPlotPoint: (dieRoll:number) => {
             const currentlySelectedTheme = (dieRoll !== 10 ) ? currentPriorityTable[rollDie(10)]: currentPriorityTable.getLowestPriority();
             return plotPointsTable[currentlySelectedTheme.toLowerCase()][rollDie(100)];
         },
-        addToTurningPoint: () => {},
         getCurrentPriorities: () => currentPriorityTable,
         randomThemeSelection
     }
@@ -41,15 +39,3 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
 }
 
 const randomThemeSelection = () => shuffle(Object.values(THEMES));
-
-
-export function acc() {
-    return {
-        action: {},
-        meta: {},
-        tension: {},
-        personal: {},
-        mystery: {},
-        social: {}
-    }
-}
