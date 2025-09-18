@@ -5,3 +5,15 @@ export enum THEMES {
     TENSION = "TENSION",
     MYSTERY = "MYSTERY"
 }
+
+export type Character = {
+
+    name: string;
+    index: number
+    notes?: string;
+
+    identity?: string;
+    characteristics?: string[];
+    specialTrait?: string
+
+}

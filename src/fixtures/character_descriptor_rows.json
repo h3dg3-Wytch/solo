@@ -1,0 +1,602 @@
+[
+  {
+    "id":1,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":1,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":2,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":2,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":3,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":3,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":4,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":4,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":5,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":5,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":6,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":6,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":7,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":7,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":8,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":8,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":9,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":9,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":10,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":10,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":11,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":11,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":12,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":12,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":13,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":13,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":14,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":14,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":15,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":15,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":16,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":16,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":17,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":17,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":18,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":18,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":19,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":19,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":20,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":20,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":21,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":21,
+    "characteristic":"Roll for two Descriptors"
+  },
+  {
+    "id":22,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":22,
+    "characteristic":"Ugly"
+  },
+  {
+    "id":23,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":23,
+    "characteristic":"Beautiful"
+  },
+  {
+    "id":24,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":24,
+    "characteristic":"Foul"
+  },
+  {
+    "id":25,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":25,
+    "characteristic":"Sweet"
+  },
+  {
+    "id":26,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":26,
+    "characteristic":"Unusual"
+  },
+  {
+    "id":27,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":27,
+    "characteristic":"Common"
+  },
+  {
+    "id":28,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":28,
+    "characteristic":"Intelligent"
+  },
+  {
+    "id":29,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":29,
+    "characteristic":"Ignorant"
+  },
+  {
+    "id":30,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":30,
+    "characteristic":"Educated"
+  },
+  {
+    "id":31,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":31,
+    "characteristic":"Skilled"
+  },
+  {
+    "id":32,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":32,
+    "characteristic":"Trained"
+  },
+  {
+    "id":33,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":33,
+    "characteristic":"Rude"
+  },
+  {
+    "id":34,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":34,
+    "characteristic":"Polite"
+  },
+  {
+    "id":35,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":35,
+    "characteristic":"Fancy"
+  },
+  {
+    "id":36,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":36,
+    "characteristic":"Rough"
+  },
+  {
+    "id":37,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":37,
+    "characteristic":"Dirty"
+  },
+  {
+    "id":38,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":38,
+    "characteristic":"Clean"
+  },
+  {
+    "id":39,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":39,
+    "characteristic":"Wealthy"
+  },
+  {
+    "id":40,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":40,
+    "characteristic":"Poor"
+  },
+  {
+    "id":41,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":41,
+    "characteristic":"Small"
+  },
+  {
+    "id":42,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":42,
+    "characteristic":"Large"
+  },
+  {
+    "id":43,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":43,
+    "characteristic":"Quiet"
+  },
+  {
+    "id":44,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":44,
+    "characteristic":"Loud"
+  },
+  {
+    "id":45,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":45,
+    "characteristic":"Fast"
+  },
+  {
+    "id":46,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":46,
+    "characteristic":"Slow"
+  },
+  {
+    "id":47,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":47,
+    "characteristic":"Exotic"
+  },
+  {
+    "id":48,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":48,
+    "characteristic":"Uniformed"
+  },
+  {
+    "id":49,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":49,
+    "characteristic":"Interesting"
+  },
+  {
+    "id":50,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":50,
+    "characteristic":"Colorful"
+  },
+  {
+    "id":51,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":51,
+    "characteristic":"Informative"
+  },
+  {
+    "id":52,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":52,
+    "characteristic":"Dangerous"
+  },
+  {
+    "id":53,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":53,
+    "characteristic":"Inept"
+  },
+  {
+    "id":54,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":54,
+    "characteristic":"Clumsy"
+  },
+  {
+    "id":55,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":55,
+    "characteristic":"Capable"
+  },
+  {
+    "id":56,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":56,
+    "characteristic":"Intrusive"
+  },
+  {
+    "id":57,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":57,
+    "characteristic":"Respectful"
+  },
+  {
+    "id":58,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":58,
+    "characteristic":"Primitive"
+  },
+  {
+    "id":59,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":59,
+    "characteristic":"Sophisticated"
+  },
+  {
+    "id":60,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":60,
+    "characteristic":"Elegant"
+  },
+  {
+    "id":61,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":61,
+    "characteristic":"Armed"
+  },
+  {
+    "id":62,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":62,
+    "characteristic":"Different"
+  },
+  {
+    "id":63,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":63,
+    "characteristic":"Young"
+  },
+  {
+    "id":64,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":64,
+    "characteristic":"Old"
+  },
+  {
+    "id":65,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":65,
+    "characteristic":"Difficult"
+  },
+  {
+    "id":66,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":66,
+    "characteristic":"Helpful"
+  },
+  {
+    "id":67,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":67,
+    "characteristic":"Harmful"
+  },
+  {
+    "id":68,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":68,
+    "characteristic":"Disciplined"
+  },
+  {
+    "id":69,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":69,
+    "characteristic":"Erratic"
+  },
+  {
+    "id":70,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":70,
+    "characteristic":"Wild"
+  },
+  {
+    "id":71,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":71,
+    "characteristic":"Crazy"
+  },
+  {
+    "id":72,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":72,
+    "characteristic":"Commanding"
+  },
+  {
+    "id":73,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":73,
+    "characteristic":"Meek"
+  },
+  {
+    "id":74,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":74,
+    "characteristic":"Humorous"
+  },
+  {
+    "id":75,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":75,
+    "characteristic":"Frightened"
+  },
+  {
+    "id":76,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":76,
+    "characteristic":"Brave"
+  },
+  {
+    "id":77,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":77,
+    "characteristic":"Strong"
+  },
+  {
+    "id":78,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":78,
+    "characteristic":"Weak"
+  },
+  {
+    "id":79,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":79,
+    "characteristic":"Impulsive"
+  },
+  {
+    "id":80,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":80,
+    "characteristic":"Strategic"
+  },
+  {
+    "id":81,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":81,
+    "characteristic":"Naive"
+  },
+  {
+    "id":82,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":82,
+    "characteristic":"Confident"
+  },
+  {
+    "id":83,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":83,
+    "characteristic":"Surprising"
+  },
+  {
+    "id":84,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":84,
+    "characteristic":"Passive"
+  },
+  {
+    "id":85,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":85,
+    "characteristic":"Bold"
+  },
+  {
+    "id":86,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":86,
+    "characteristic":"Careless"
+  },
+  {
+    "id":87,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":87,
+    "characteristic":"Cautious"
+  },
+  {
+    "id":88,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":88,
+    "characteristic":"Sneaky"
+  },
+  {
+    "id":89,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":89,
+    "characteristic":"Intimidating"
+  },
+  {
+    "id":90,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":90,
+    "characteristic":"Powerful"
+  },
+  {
+    "id":91,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":91,
+    "characteristic":"Powerless"
+  },
+  {
+    "id":92,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":92,
+    "characteristic":"Hurt"
+  },
+  {
+    "id":93,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":93,
+    "characteristic":"Rough"
+  },
+  {
+    "id":94,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":94,
+    "characteristic":"Gentle"
+  },
+  {
+    "id":95,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":95,
+    "characteristic":"Caring"
+  },
+  {
+    "id":96,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":96,
+    "characteristic":"Principled"
+  },
+  {
+    "id":97,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":97,
+    "characteristic":"Arrogant"
+  },
+  {
+    "id":98,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":98,
+    "characteristic":"Curious"
+  },
+  {
+    "id":99,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":99,
+    "characteristic":"Supportive"
+  },
+  {
+    "id":100,
+    "created_at":"2025-09-17 22:09:19.44829+00",
+    "roll":100,
+    "characteristic":"Heroic"
+  }
+]

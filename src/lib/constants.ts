@@ -19,8 +19,7 @@ export const priorityTable = (
   fourthPriority: string = "",
   fifthPriority: string = "",
   isCurrentlyOnFourth: boolean = true
-) => {
-  const table = {
+) => ({
     1: firstPriority,
     2: firstPriority,
     3: firstPriority,
@@ -37,10 +36,7 @@ export const priorityTable = (
     fourthPriority,
     fifthPriority,
     isCurrentlyOnFourth
-  }
-
-  return table;
-};
+});
 
 export function toggleLowestPriorityTheme(table) {
 

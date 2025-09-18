@@ -26,6 +26,7 @@ describe('Adventure Crafter', () => {
         expect(actual.isCurrentlyOnFourth).toEqual(true);
         
         expect(toggleLowestPriorityTheme(actual)[10]).toEqual(actual.fifthPriority)
+        expect(toggleLowestPriorityTheme(actual).isCurrentlyOnFourth).toEqual(false);
     });
     
     it('can set themes', () => {

@@ -1,3 +1,5 @@
+import * as R from "ramda";
+
 export function generateAdventureResult() {
     
 }
@@ -17,4 +19,8 @@ export function shuffle<T>(array: T[]): T[] {
     [result[i], result[j]] = [result[j], result[i]];
   }
   return result;
+}
+
+export function toTable(table) {
+ return R.indexBy(R.prop('roll'), table);
 }

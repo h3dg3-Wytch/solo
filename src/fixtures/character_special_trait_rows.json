@@ -1,0 +1,702 @@
+[
+  {
+    "id":1,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":1
+  },
+  {
+    "id":2,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":2
+  },
+  {
+    "id":3,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":3
+  },
+  {
+    "id":4,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":4
+  },
+  {
+    "id":5,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":5
+  },
+  {
+    "id":6,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":6
+  },
+  {
+    "id":7,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":7
+  },
+  {
+    "id":8,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":8
+  },
+  {
+    "id":9,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":9
+  },
+  {
+    "id":10,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":10
+  },
+  {
+    "id":11,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":11
+  },
+  {
+    "id":12,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":12
+  },
+  {
+    "id":13,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":13
+  },
+  {
+    "id":14,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":14
+  },
+  {
+    "id":15,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":15
+  },
+  {
+    "id":16,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":16
+  },
+  {
+    "id":17,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":17
+  },
+  {
+    "id":18,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":18
+  },
+  {
+    "id":19,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":19
+  },
+  {
+    "id":20,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":20
+  },
+  {
+    "id":21,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":21
+  },
+  {
+    "id":22,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":22
+  },
+  {
+    "id":23,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":23
+  },
+  {
+    "id":24,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":24
+  },
+  {
+    "id":25,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":25
+  },
+  {
+    "id":26,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":26
+  },
+  {
+    "id":27,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":27
+  },
+  {
+    "id":28,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":28
+  },
+  {
+    "id":29,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":29
+  },
+  {
+    "id":30,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":30
+  },
+  {
+    "id":31,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":31
+  },
+  {
+    "id":32,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":32
+  },
+  {
+    "id":33,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":33
+  },
+  {
+    "id":34,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":34
+  },
+  {
+    "id":35,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":35
+  },
+  {
+    "id":36,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":36
+  },
+  {
+    "id":37,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":37
+  },
+  {
+    "id":38,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":38
+  },
+  {
+    "id":39,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":39
+  },
+  {
+    "id":40,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":40
+  },
+  {
+    "id":41,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":41
+  },
+  {
+    "id":42,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":42
+  },
+  {
+    "id":43,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":43
+  },
+  {
+    "id":44,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":44
+  },
+  {
+    "id":45,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":45
+  },
+  {
+    "id":46,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":46
+  },
+  {
+    "id":47,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":47
+  },
+  {
+    "id":48,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":48
+  },
+  {
+    "id":49,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":49
+  },
+  {
+    "id":50,
+    "created_at":"2025-09-17 21:44:22.164364+00",
+    "trait":"THE CHARACTER IS AN INDIVIDUAL",
+    "description":"The Character is an individual, as opposed to an organization or object.",
+    "roll":50
+  },
+  {
+    "id":101,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":51
+  },
+  {
+    "id":102,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":52
+  },
+  {
+    "id":103,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":53
+  },
+  {
+    "id":104,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":54
+  },
+  {
+    "id":105,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":55
+  },
+  {
+    "id":106,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":56
+  },
+  {
+    "id":107,
+    "created_at":"2025-09-17 21:48:03.875246+00",
+    "trait":"THE CHARACTER IS AN ORGANIZATION",
+    "description":"This Character is not a specific individual, but an organization or\ncommunity. General members of this organization are considered part of the Character as a community.",
+    "roll":57
+  },
+  {
+    "id":108,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":58
+  },
+  {
+    "id":109,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":59
+  },
+  {
+    "id":110,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":60
+  },
+  {
+    "id":111,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":61
+  },
+  {
+    "id":112,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":62
+  },
+  {
+    "id":113,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":63
+  },
+  {
+    "id":114,
+    "created_at":"2025-09-17 21:48:59.357315+00",
+    "trait":"THE CHARACTER IS AN OBJECT",
+    "description":"This Character is something other than a typical, living individual or group\norganization. The Character is an object of some kind that could also be considered a Character unto itself. Examples\nmight include a spaceship that is old and temperamental, or a city teeming with culture.",
+    "roll":64
+  },
+  {
+    "id":115,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":65
+  },
+  {
+    "id":116,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":66
+  },
+  {
+    "id":117,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":67
+  },
+  {
+    "id":118,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":68
+  },
+  {
+    "id":119,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":69
+  },
+  {
+    "id":120,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":70
+  },
+  {
+    "id":121,
+    "created_at":"2025-09-17 21:50:13.542673+00",
+    "trait":"THE CHARACTER IS CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure somehow connected with the Plotline of this Turning Point.",
+    "roll":71
+  },
+  {
+    "id":122,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":72
+  },
+  {
+    "id":123,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":73
+  },
+  {
+    "id":124,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":74
+  },
+  {
+    "id":125,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":75
+  },
+  {
+    "id":126,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":76
+  },
+  {
+    "id":127,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":77
+  },
+  {
+    "id":128,
+    "created_at":"2025-09-17 21:51:04.262498+00",
+    "trait":"THE CHARACTER IS NOT CONNECTED TO THIS PLOTLINE",
+    "description":"This Character enters the Adventure not\nconnected to this Turning Point\u2019s Plotline. The Character may become part of the Plotline in the course of this Turning\nPoint, but does not start off that way. Examples include bystanders to the main events of a Turning Point or people\noutside the events of the Plotline who get drawn into the Adventure",
+    "roll":78
+  },
+  {
+    "id":129,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":79
+  },
+  {
+    "id":130,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":80
+  },
+  {
+    "id":131,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":81
+  },
+  {
+    "id":132,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":82
+  },
+  {
+    "id":133,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":83
+  },
+  {
+    "id":134,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":84
+  },
+  {
+    "id":135,
+    "created_at":"2025-09-17 21:52:11.286855+00",
+    "trait":"THE CHARACTER ASSISTS IN RESOLVING THIS PLOTLINE",
+    "description":"This Character is someone who can help resolve\nthe current Plotline in some way, likely serving as an aid to the Player Characters.",
+    "roll":85
+  },
+  {
+    "id":136,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":86
+  },
+  {
+    "id":137,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":87
+  },
+  {
+    "id":138,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":88
+  },
+  {
+    "id":139,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":89
+  },
+  {
+    "id":140,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":90
+  },
+  {
+    "id":141,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":91
+  },
+  {
+    "id":142,
+    "created_at":"2025-09-17 21:54:29.173196+00",
+    "trait":"THE CHARACTER HINDERS RESOLVING THIS PLOTLINE",
+    "description":"This Character gets in the way of resolving the\ncurrent Plotline in some way, likely serving as a complication to the Player Characters.",
+    "roll":92
+  },
+  {
+    "id":143,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":93
+  },
+  {
+    "id":144,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":94
+  },
+  {
+    "id":145,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":95
+  },
+  {
+    "id":146,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":96
+  },
+  {
+    "id":147,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":97
+  },
+  {
+    "id":148,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":98
+  },
+  {
+    "id":149,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":99
+  },
+  {
+    "id":150,
+    "created_at":"2025-09-17 21:55:39.334161+00",
+    "trait":"THE CHARACTER IS CONNECTED TO AN EXISTING CHARACTER",
+    "description":"This Character has some relationship\nto another, existing Character in this Adventure. Roll on the Characters List to see who. A result of New Character\nis changed to Choose The Most Logical Character. The connection can be anything, from the two Characters are\nrelated, they know each other, they were former friends, they both work in the same occupation or belong to the\nsame organization, they look or act similarly, they have similar skills or equipment, etc. The connection can be as\nclose or as distant as you like.",
+    "roll":100
+  }
+]
