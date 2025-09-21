@@ -2,7 +2,7 @@ import { setPriority } from "os";
 import { adventureTables } from "./adventureTables";
 import {groupBy, prop, fromPairs, map, } from 'ramda';
 import { THEMES } from './types';
-import { priorityTable } from  './constants';
+import { themeTable } from  './constants';
 
 import { rollDie, shuffle } from './utils'
 
@@ -21,11 +21,11 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
         
         setPriority: (prioritiesArray) => { 
             priorities = prioritiesArray;
-            currentPriorityTable = priorityTable(...priorities);
+            currentPriorityTable = themeTable(...priorities);
         },
         generateRandomPriorityTable: () => {
             priorities = randomThemeSelection();
-            currentPriorityTable = priorityTable(...priorities)
+            currentPriorityTable = themeTable(...priorities)
             return currentPriorityTable;
         }, 
         generateRandomPlotPoint: (dieRoll:number) => {

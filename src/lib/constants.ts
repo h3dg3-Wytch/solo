@@ -12,7 +12,7 @@ export const NEW_PLOTLINE = "NEW PLOTLINE";
 export const CHOOSE_MOST_LOGICAL_CHARACTER= "Choose Most Logical Character";
 export const NEW_CHARACTER = "NEW CHARACTER";
 
-export const priorityTable = (
+export const themeTable = (
   firstPriority: string = "",
   secondPriority: string = "",
   thirdPriority: string = "",
@@ -40,7 +40,7 @@ export const priorityTable = (
 
 export function toggleLowestPriorityTheme(table) {
 
-    return priorityTable(table.firstPriority,
+    return themeTable(table.firstPriority,
         table.secondPriority,
         table.thirdPriority,
         table.fourthPriority,

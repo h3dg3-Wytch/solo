@@ -11,6 +11,5 @@ nextjs
 check in on the prod server, it probably is breaking, go through the flows
 - make adventure crafter
   make FP versions for each table
-  character generator
   refactor plot point table 
-  
+  supabase client   

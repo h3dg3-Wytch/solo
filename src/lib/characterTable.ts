@@ -1,8 +1,9 @@
 import { Character } from "./types";
 import * as R from "ramda";
-import { randomNumberBetween, rollDie, toTable } from "./utils"; 
+import { chooseFromTable, randomNumberBetween, rollDie, toTable } from "./utils"; 
 
-
+const IDENTITY_TWO_DESCRIPTORS_THRESHOLD = 33;
+const DESCRIPTORS_TWO_DESCRIPTORS_THRESHOLD = 21;
 
 export const CharacterTable = (
     characterSpecialTraits,
@@ -21,13 +22,12 @@ export const generateRandomCharacter = (characterTable) => ({
     
 })
 
-export const generateRandomDescriptor = (characterTable) => generateRandomEntry(rollDie(100), 21, characterTable.descriptors); 
-export const generateRandomIdentity = (characterTable) => generateRandomEntry(rollDie(100), 33, characterTable.identity);
-export const generateSpecialTrait = (characterTable) => chooseFromCharacterTable(rollDie(100), characterTable.specialTraits);
+export const generateRandomDescriptor = (characterTable) => generateRandomEntry(rollDie(100), DESCRIPTORS_TWO_DESCRIPTORS_THRESHOLD, characterTable.descriptors); 
+export const generateRandomIdentity = (characterTable) => generateRandomEntry(rollDie(100), IDENTITY_TWO_DESCRIPTORS_THRESHOLD, characterTable.identity);
+export const generateSpecialTrait = (characterTable) => chooseFromTable(rollDie(100), characterTable.specialTraits);
 export const generateRandomEntry = (dieRoll, threshold, table) => {
     return (dieRoll <= threshold) 
-        ? [chooseFromCharacterTable(dieRoll, table), chooseFromCharacterTable(randomNumberBetween(threshold + 1, 100), table), chooseFromCharacterTable(randomNumberBetween(threshold + 1, 100), table)]
-        : [chooseFromCharacterTable(dieRoll, table)]
+        ? [chooseFromTable(dieRoll, table), chooseFromTable(randomNumberBetween(threshold + 1, 100), table), chooseFromTable(randomNumberBetween(threshold + 1, 100), table)]
+        : [chooseFromTable(dieRoll, table)]
     
 }
-export const chooseFromCharacterTable = (die, table) => table[die];

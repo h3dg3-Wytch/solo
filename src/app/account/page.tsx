@@ -15,9 +15,13 @@ export default async function Account() {
     if(error || !user) {
         redirect('/login')
     }
-      const { data } = await supabase.from("character").select("*").eq('user_id', user?.id);
+    const { data: characters } = await supabase.from("character").select("*").eq('user_id', user?.id);
+    const { data: plotlines, error: e } = await supabase.from("plotline").select("*").eq('user_id', user?.id);
     
-    console.log('character', data);
+    console.log('characters', );
+    console.log('plotline', plotlines, e);
+
+    
    
    
     return <AccountForm user={user} />

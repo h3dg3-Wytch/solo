@@ -1,0 +1,40 @@
+begin
+  -- Insert into profiles
+  insert into public."user" (id, first_name, last_name)
+  values (
+    new.id,
+    new.raw_user_meta_data ->> 'first_name',
+    new.raw_user_meta_data ->> 'last_name'
+  );
+  -- Insert characters
+  for i in 1..100 loop
+    insert into public.characters (user_id, "index", default_value, created_at)
+    values (
+      new.id,
+      i,
+      case
+        when i in (13,14,15,16,29,30,31,32,45,46,47,48,53,54,55,56,57,58,59,60,61,62,63,64,69,70,71,72,73,74,75,76,77,78,79,80,85,86,87,88,97,98,99,100)
+        then 'Choose Most Logical Character'
+        else 'New Character'
+      end,
+      now()
+    );
+  end loop;
+
+  -- Insert plotlines
+  for i in 1..100 loop
+    insert into public.plotlines (user_id, "index", default_value, created_at)
+    values (
+      new.id,
+      i,
+      case
+        when i in (1,2,3,4,9,10,11,12,13,14,15,16,17,18,19,20,25,26,27,28,29,30,31,32,33,34,35,36,41,42,43,44,45,46,47,48,49,50,51,52,57,58,59,60,61,62,63,64,65,66,67,68,73,74,75,76,77,78,79,80,81,82,83,84,89,90,91,92,93,94,95,96,97,98,99,100)
+        then 'Choose Most Logical Plotline'
+        else 'New Plotline'
+      end,
+      now()
+    );
+  end loop;
+
+  return new;
+end;

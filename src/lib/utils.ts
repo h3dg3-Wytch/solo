@@ -28,3 +28,5 @@ export function shuffle<T>(array: T[]): T[] {
 export function toTable(table) {
  return R.indexBy(R.prop('roll'), table);
 }
+
+export const chooseFromTable = (die, table) => table[die];
