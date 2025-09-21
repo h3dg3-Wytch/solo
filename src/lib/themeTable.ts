@@ -1,3 +1,5 @@
+import { Theme } from "./types";
+
 export const themeTable = (
   firstPriority: string = "",
   secondPriority: string = "",
@@ -24,7 +26,7 @@ export const themeTable = (
     isCurrentlyOnFourth
 });
 
-export function toggleLowestPriorityTheme(table) {
+export function toggleLowestPriorityTheme(table: Theme) {
 
     return themeTable(table.firstPriority,
         table.secondPriority,
