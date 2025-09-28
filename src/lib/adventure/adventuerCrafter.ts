@@ -1,10 +1,10 @@
 import { setPriority } from "os";
-import { adventureTables } from "./adventureTables";
+import { adventureTables } from "../adventureTables";
 import {groupBy, prop, fromPairs, map, } from 'ramda';
-import { THEMES } from './types';
-import { themeTable } from  './constants';
+import { THEMES } from '../types';
+import { themeTable } from  '../constants';
 
-import { rollDie, shuffle } from './utils'
+import { rollDie, shuffle } from '../utils'
 
 export function AdventureCrafter(characters, plotlines, plotPoints) {
     
