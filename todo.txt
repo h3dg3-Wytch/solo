@@ -1,7 +1,6 @@
 auth - 
-	set up atuh 
+	set up atuh - sign out 
 	read up on securing the site
-prisma - different orm
 forms
 figma 
 promises? RAMDA 
@@ -11,5 +10,6 @@ nextjs
 check in on the prod server, it probably is breaking, go through the flows
 - make adventure crafter
   make FP versions for each table
-  refactor plot point table 
-  supabase client   
+  type + service for each table
+
+

@@ -1,7 +1,7 @@
 const testData = require('../fixtures/action_table.transformed.json');
 
 import { adventureTables } from "@/lib/adventureTables"; 
-import { AdventureCrafter } from "@/lib/adventuerCrafter"; 
+import { AdventureCrafter } from "@/lib/adventure/adventuerCrafter"; 
 import { THEMES } from "@/lib/types";
 import {toggleLowestPriorityTheme} from "@/lib/constants";
 

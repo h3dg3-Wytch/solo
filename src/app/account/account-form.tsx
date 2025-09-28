@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
-import { AdventureCrafter } from "@/lib/adventuerCrafter";
+// import { AdventureCrafter } from "@/lib/adventure/adventuerCrafter";
 
 // ...
 
@@ -85,7 +85,7 @@ export default function AccountForm({ user }: { user: User | null }) {
       
       console.log(data);
       
-      const expected = AdventureCrafter([], [], data);
+    //   const expected = AdventureCrafter([], [], data);
       expected.generateRandomPriorityTable();
       
       console.log('plotPoint', expected.generateRandomPlotPoint())

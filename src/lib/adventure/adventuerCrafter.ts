@@ -1,4 +1,4 @@
-import { setPriority } from "os";
+/* import { setPriority } from "os";
 import { adventureTables } from "../adventureTables";
 import {groupBy, prop, fromPairs, map, } from 'ramda';
 import { THEMES } from '../types';
@@ -38,4 +38,4 @@ export function AdventureCrafter(characters, plotlines, plotPoints) {
 
 }
 
-const randomThemeSelection = () => shuffle(Object.values(THEMES));
+const randomThemeSelection = () => shuffle(Object.values(THEMES)); */

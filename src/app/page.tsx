@@ -3,7 +3,7 @@ import Image from "next/image";
 import { createClient } from '@/utils/supabase/client';
 import { pipe, values, filter, propEq, map, tap, groupBy, prop} from 'ramda';
 import { useEffect } from "react";
-import { AdventureCrafter } from "@/lib/adventuerCrafter";
+import { AdventureCrafter } from "@/lib/adventure/adventuerCrafter";
 
 export default function Home() {
   

@@ -1,4 +1,5 @@
-import { Theme } from "./types";
+import { THEMES } from "../types";
+import { shuffle } from "../utils";
 
 export const themeTable = (
   firstPriority: string = "",
@@ -36,4 +37,11 @@ export function toggleLowestPriorityTheme(table: Theme) {
         !table.isCurrentlyOnFourth
     )
 }
+
+export function generateRandomPriorityTable: () => {
+    priorities = randomThemeSelection();
+    currentPriorityTable = themeTable(...priorities)
+    return currentPriorityTable;
+}
     
+const randomThemeSelection = () => shuffle(Object.values(THEMES)); 

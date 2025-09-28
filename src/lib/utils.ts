@@ -30,3 +30,8 @@ export function toTable(table) {
 }
 
 export const chooseFromTable = (die, table) => table[die];
+
+export const adventureTables = R.pipe(
+  R.chain(plotPoint => plotPoint.dice_rolls.map(num => [num, plotPoint])),
+  R.fromPairs
+);
