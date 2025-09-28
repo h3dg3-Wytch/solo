@@ -2,6 +2,9 @@ auth -
 	set up atuh - sign out 
 	read up on securing the site
 forms
+  login - x
+  signup route 
+
 figma 
 promises? RAMDA 
 nextjs
