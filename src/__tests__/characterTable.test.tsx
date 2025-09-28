@@ -1,6 +1,6 @@
 
 import { adventureTables } from "@/lib/adventureTables";
-import { CharacterTable, generateRandomCharacter, generateSpecialTrait} from "@/lib/characterTable";
+import { CharacterTable, generateRandomCharacter, generateSpecialTrait} from "@/lib/character/characterTable";
 import * as utils from "@/lib/utils";
 import * as R from "ramda";
 

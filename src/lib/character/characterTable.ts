@@ -1,6 +1,6 @@
-import { Character } from "./types";
+import { Character } from "../types";
 import * as R from "ramda";
-import { chooseFromTable, randomNumberBetween, rollDie, toTable } from "./utils"; 
+import { chooseFromTable, randomNumberBetween, rollDie, toTable } from "../utils"; 
 
 const IDENTITY_TWO_DESCRIPTORS_THRESHOLD = 33;
 const DESCRIPTORS_TWO_DESCRIPTORS_THRESHOLD = 21;
