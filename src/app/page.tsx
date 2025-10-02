@@ -1,11 +1,12 @@
 'use client'
 import Image from "next/image";
-import { createClient } from '@/utils/supabase/client';
+import { redirect } from 'next/navigation'
 import { pipe, values, filter, propEq, map, tap, groupBy, prop} from 'ramda';
 import { useEffect } from "react";
-import { AdventureCrafter } from "@/lib/adventure/adventuerCrafter";
+import { AdventureCrafter } from "@/lib/adventure/adventure";
 
-export default function Home() {
+export default async function Home() {
+  
   
   return (
     
