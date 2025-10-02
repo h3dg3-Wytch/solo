@@ -1,39 +1,38 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
 import TurningPointSheet from "./turning-point-form";
+import Themes from "./themes";
+import AdventureInfo from "./adventure-info";
+
+
 
 export default function AdventureSheet() {
+    const [turningPoints, setTurningPoints] = useState<number[]>([0]);
+
+  const addTurningPoint = () => {
+    setTurningPoints((prev) => [...prev, prev.length]);
+  };
   return (
     <div className="bg-white text-gray-900 p-6 max-w-4xl mx-auto rounded-2xl shadow">
       <h1 className="text-2xl font-bold mb-4">Adventure Sheet</h1>
 
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <label className="block text-sm font-semibold">Adventure</label>
-          <input
-            type="text"
-            className="w-full border rounded-lg p-2 mt-1"
-            placeholder="Adventure name"
-          />
+      <AdventureInfo />
+         {/* Render all TurningPointSheet components */}
+      {turningPoints.map((id) => (
+        <div key={id} className="mb-4">
+          <TurningPointSheet />
         </div>
-        <div>
-          <label className="block text-sm font-semibold">Date</label>
-          <input
-            type="date"
-            className="w-full border rounded-lg p-2 mt-1"
-          />
-        </div>
-      </div>
+      ))}
 
-      <div className="mb-6">
-        <label className="block text-sm font-semibold">Notes</label>
-        <textarea
-          className="w-full border rounded-lg p-2 mt-1"
-          rows={3}
-          placeholder="General notes..."
-        />
+      {/* Add Turning Point Button */}
+      <div className="flex justify-center mt-4">
+        <button
+          onClick={addTurningPoint}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          + Add Turning Point
+        </button>
       </div>
-
-    <TurningPointSheet /> 
        
     </div>
     
