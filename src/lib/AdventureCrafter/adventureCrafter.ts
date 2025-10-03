@@ -4,8 +4,10 @@
 // create extension methods 
 
 import { getAdventureByUserId } from "../adventure/adventureService";
+import { getAdventureEntriesByUserId } from "../adventure_entry/adventureEntryServices";
 import { getCharacters } from "../character/characterService";
 import { getCharacterDescriptors } from "../character_descriptor/characterDescriptorService";
+import { getCharacterIdentities } from "../character_identity/characterDescriptorService";
 import { getPlotlines } from "../plotline/plotlineService";
 import { PlotlineTable } from "../plotline/plotLineTable";
 import { getThemes } from "../themes/themeService";
@@ -18,10 +20,14 @@ export default async function AdventureCrafter(userId: string) {
     const themes = await getThemes(userId);
     const adventure = await getAdventureByUserId(userId); 
     
+    const adventureEntries = await getAdventureEntriesByUserId(userId)
     const characterDescriptor = await getCharacterDescriptors();
+    const characterIdentity = await getCharacterIdentities();
    
     console.log('adventure', adventure);
+    console.log('adventureEntries', adventureEntries);
     console.log('desc', characterDescriptor);
+    console.log('identity', characterIdentity);
     
     return {
         characters,
