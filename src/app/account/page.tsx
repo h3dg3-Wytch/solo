@@ -4,6 +4,7 @@ import { createClient } from '@/utils/supabase/server'
 import { getCharacters } from '@/lib/character/characterService'
 import { getPlotlines } from '@/lib/plotline/plotlineService'
 import { PlotPointTable } from '@/lib/plot_point/plotPointTable'
+import AdventureCrafter from '@/lib/AdventureCrafter/adventureCrafter'
 
 export default async function Account() {
     const supabase = await createClient()
@@ -28,8 +29,8 @@ export default async function Account() {
     // console.log('plotline', plotlines);
     // 
 
-    const { data } = await supabase.from("plot_point").select("*");
-    console.log(PlotPointTable(data));
+    const adv = await AdventureCrafter(user?.id);
+    console.log('Adventure Crafter', adv);
     
 
     return <AccountForm user={user} />

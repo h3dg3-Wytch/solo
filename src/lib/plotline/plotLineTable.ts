@@ -1,7 +1,7 @@
-import { chooseFromTable, toTable } from "./utils";
+import { chooseFromTable, toSimpleTable } from "../utils";
 
 export const PlotlineTable = (plotlineRows) => ({
-    plotlines: toTable(plotlineRows)
+    plotlines: toSimpleTable(plotlineRows)
 });
 
 export const getRandomPlotline = (plotlineTable) => chooseFromTable(rollDie(100), plotlineTable.plotlines);

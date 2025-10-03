@@ -29,9 +29,18 @@ export function toTable(table) {
  return R.indexBy(R.prop('roll'), table);
 }
 
+export function toSimpleTable(table) {
+ return R.indexBy(R.prop('index'), table);
+}
+
 export const chooseFromTable = (die, table) => table[die];
 
 export const adventureTables = R.pipe(
   R.chain(plotPoint => plotPoint.dice_rolls.map(num => [num, plotPoint])),
   R.fromPairs
 );
+
+export const handleError = (error: any) => {
+  if (error) throw error;
+  return true;
+};

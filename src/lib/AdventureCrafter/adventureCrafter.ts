@@ -1,4 +1,34 @@
 
+// get all the tables
+// add ways to update them 
+// create extension methods 
+
+import { getAdventureByUserId } from "../adventure/adventureService";
+import { getCharacters } from "../character/characterService";
+import { getPlotlines } from "../plotline/plotlineService";
+import { PlotlineTable } from "../plotline/plotLineTable";
+import { getThemes } from "../themes/themeService";
+
+// CharacterTable
+export default async function AdventureCrafter(userId: string) {
+    
+    const characters = (await getCharacters(userId));
+    const plotlines = PlotlineTable(await getPlotlines(userId));
+    const themes = await getThemes(userId);
+    const adventure = await getAdventureByUserId(userId); 
+   
+    console.log('adventure', adventure);
+    
+    return {
+        characters,
+        toTablegetPlotLines: () => plotlines,
+        themes
+    }
+
+
+    
+}
+
 /* import { setPriority } from "os";
 import { adventureTables } from "../adventureTables";
 import {groupBy, prop, fromPairs, map, } from 'ramda';
@@ -6,7 +36,14 @@ import { THEMES } from '../types';
 import { themeTable } from  '../constants';
 
 import { rollDie, shuffle } from '../utils'
+export const Adventure = ({
+    name,
+    date,
+    notes,
+    
+}) => ({
 
+});
 export function AdventureCrafter(characters, plotlines, plotPoints) {
     
     const grouped = groupBy(prop('category'), plotPoints);

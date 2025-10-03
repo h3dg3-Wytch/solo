@@ -40,37 +40,34 @@ export default function AdventureSheet() {
       </div>
     </div>
 
-    {/* Right side: Plotlines + Other Characters */}
-    <div className="hidden md:flex flex-col gap-6 w-80">
-      {/* Plotlines */}
-      <div>
-        <h2 className="text-lg font-bold mb-2">Plotlines</h2>
-        <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
-          {Object.keys(defaultPlotLineTable).map((index) => (
-              <div key={index} className="py-0.5 border-b last:border-b-0">
-      <label className="font-semibold mr-1">{index}:</label>
-      <span className="text-sm">{defaultPlotLineTable[index]}</span>
-    </div>
-          ))}
-         
+<div className="hidden md:flex flex-col gap-6 w-80">
+  {/* Plotlines */}
+  <div className="sticky top-0 bg-white z-10">
+    <h2 className="text-lg font-bold mb-2">Plotlines</h2>
+    <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
+      {Object.keys(defaultPlotLineTable).map((index) => (
+        <div key={index} className="py-0.5 border-b last:border-b-0">
+          <label className="font-semibold mr-1">{index}:</label>
+          <span className="text-sm">{defaultPlotLineTable[index]}</span>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
 
-      {/* Other Characters */}
-      <div>
-        <h2 className="text-lg font-bold mb-2">Character List</h2>
-        <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
-          {Object.keys(defaultCharacterTable).map((index) => (
-              <div key={index} className="py-0.5 border-b last:border-b-0">
-      <label className="font-semibold mr-1">{index}:</label>
-      <span className="text-sm">{defaultCharacterTable[index]}</span>
-    </div>
-          ))}
+  {/* Other Characters */}
+  <div className="sticky top-[350px] bg-white z-10">
+    <h2 className="text-lg font-bold mb-2">Character List</h2>
+    <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
+      {Object.keys(defaultCharacterTable).map((index) => (
+        <div key={index} className="py-0.5 border-b last:border-b-0">
+          <label className="font-semibold mr-1">{index}:</label>
+          <span className="text-sm">{defaultCharacterTable[index]}</span>
         </div>
-      </div>
+      ))}
     </div>
   </div>
 </div>
-
-  );
+</div>
+</div>);
 }
+

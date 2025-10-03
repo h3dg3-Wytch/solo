@@ -7,3 +7,5 @@ export type AdventureEntry = {
   user_id?: string | null; // uuid, default gen_random_uuid()
   adventure_id?: number | null; // FK -> adventure.id
 };
+
+export const AdventureEntry = () => ({});
