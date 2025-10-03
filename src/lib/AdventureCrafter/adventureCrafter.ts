@@ -5,6 +5,7 @@
 
 import { getAdventureByUserId } from "../adventure/adventureService";
 import { getCharacters } from "../character/characterService";
+import { getCharacterDescriptors } from "../character_descriptor/characterDescriptorService";
 import { getPlotlines } from "../plotline/plotlineService";
 import { PlotlineTable } from "../plotline/plotLineTable";
 import { getThemes } from "../themes/themeService";
@@ -16,8 +17,11 @@ export default async function AdventureCrafter(userId: string) {
     const plotlines = PlotlineTable(await getPlotlines(userId));
     const themes = await getThemes(userId);
     const adventure = await getAdventureByUserId(userId); 
+    
+    const characterDescriptor = await getCharacterDescriptors();
    
     console.log('adventure', adventure);
+    console.log('desc', characterDescriptor);
     
     return {
         characters,
