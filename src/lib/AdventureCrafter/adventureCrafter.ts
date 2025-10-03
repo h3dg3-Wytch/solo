@@ -9,9 +9,11 @@ import { getCharacters } from "../character/characterService";
 import { getCharacterDescriptors } from "../character_descriptor/characterDescriptorService";
 import { getCharacterIdentities } from "../character_identity/characterDescriptorService";
 import { getCharacterSpecialTraits } from "../character_special_trait/characterSpecialTraits";
+import { getPlotPoints } from "../plot_point/plotPointServices";
 import { getPlotlines } from "../plotline/plotlineService";
 import { PlotlineTable } from "../plotline/plotLineTable";
 import { getThemes } from "../themes/themeService";
+import { getTurningPointEntriesByUserId } from "../turning_point_entry/turningPointEntryService";
 
 // CharacterTable
 export default async function AdventureCrafter(userId: string) {
@@ -19,18 +21,21 @@ export default async function AdventureCrafter(userId: string) {
     const characters = (await getCharacters(userId));
     const plotlines = PlotlineTable(await getPlotlines(userId));
     const themes = await getThemes(userId);
-    const adventure = await getAdventureByUserId(userId); 
-    
+    const adventure = await getAdventureByUserId(userId);
     const adventureEntries = await getAdventureEntriesByUserId(userId)
+    const turningPointEntires = await getTurningPointEntriesByUserId(userId); 
     const characterDescriptor = await getCharacterDescriptors();
     const characterIdentity = await getCharacterIdentities();
     const characterSpecialTraits = await getCharacterSpecialTraits();
-   
+    const plotPoints = await getPlotPoints();
+     
     console.log('adventure', adventure);
     console.log('adventureEntries', adventureEntries);
     console.log('desc', characterDescriptor);
     console.log('identity', characterIdentity);
     console.log('specialTraits', characterSpecialTraits);
+    console.log('plot points', plotPoints);
+    console.log('turning point entry', turningPointEntires);
     
     return {
         characters,
