@@ -8,6 +8,7 @@ import { getAdventureEntriesByUserId } from "../adventure_entry/adventureEntrySe
 import { getCharacters } from "../character/characterService";
 import { getCharacterDescriptors } from "../character_descriptor/characterDescriptorService";
 import { getCharacterIdentities } from "../character_identity/characterDescriptorService";
+import { getCharacterSpecialTraits } from "../character_special_trait/characterSpecialTraits";
 import { getPlotlines } from "../plotline/plotlineService";
 import { PlotlineTable } from "../plotline/plotLineTable";
 import { getThemes } from "../themes/themeService";
@@ -23,11 +24,13 @@ export default async function AdventureCrafter(userId: string) {
     const adventureEntries = await getAdventureEntriesByUserId(userId)
     const characterDescriptor = await getCharacterDescriptors();
     const characterIdentity = await getCharacterIdentities();
+    const characterSpecialTraits = await getCharacterSpecialTraits();
    
     console.log('adventure', adventure);
     console.log('adventureEntries', adventureEntries);
     console.log('desc', characterDescriptor);
     console.log('identity', characterIdentity);
+    console.log('specialTraits', characterSpecialTraits);
     
     return {
         characters,
