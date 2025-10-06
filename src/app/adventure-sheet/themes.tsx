@@ -1,9 +1,16 @@
 import { useState } from "react";
 
-const themes = ["Action", "Social", "Personal", "Mystery", "Tension"];
+const themes = ["action", "social", "personal", "mystery", "tension"];
 
-export default function Themes() {
-  const [selectedThemes, setSelectedThemes] = useState<(string | null)[]>(Array(5).fill(null));
+export default function Themes({ themeTable }) {
+  console.log(themeTable);
+  const [selectedThemes, setSelectedThemes] = useState<(string | null)[]>(() => [
+    themeTable?.firstPriority ?? null,
+    themeTable?.secondPriority ?? null,
+    themeTable?.thirdPriority ?? null,
+    themeTable?.fourthPriority ?? null,
+    themeTable?.fifthPriority ?? null,
+  ]);
 
   const handleChange = (index: number, value: string) => {
     const newSelections = [...selectedThemes];
@@ -13,7 +20,8 @@ export default function Themes() {
 
   const getAvailableOptions = (currentIndex: number) => {
     return themes.filter(
-      (theme) => !selectedThemes.includes(theme) || selectedThemes[currentIndex] === theme
+      (theme) =>
+        !selectedThemes.includes(theme) || selectedThemes[currentIndex] === theme
     );
   };
 
