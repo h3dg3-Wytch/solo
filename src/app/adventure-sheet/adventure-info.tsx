@@ -1,14 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Adventure } from "@/lib/adventure/types";
 import Themes from "./themes";
 import AdventureCrafter from "@/lib/AdventureCrafter/adventureCrafter";
 import { createClient } from "@/utils/supabase/client";
+import { useDebounce } from "use-debounce";
 
-export default function AdventureInfo({ adventure, themeTable, user}: { adventure: Adventure, themeTable: any }) {
-  console.log(user) 
+
+export default function AdventureInfo({ adventure, themeTable }: { adventure: Adventure, themeTable: any }) {
+  console.log("in the theme table") 
+  
   
   const supabase = createClient(); 
   const queryClient = useQueryClient();
@@ -18,6 +21,7 @@ export default function AdventureInfo({ adventure, themeTable, user}: { adventur
     notes: adventure.notes || "",
   });
 
+  const [debouncedForm] = useDebounce(form, 500);
   // --- Update mutation
   const updateAdventure = useMutation({
     mutationFn: async (updated: Partial<Adventure>) => {
@@ -25,7 +29,7 @@ export default function AdventureInfo({ adventure, themeTable, user}: { adventur
       const { error } = await supabase
         .from("adventure")
         .update(updated)
-        .eq("user_id", user.id);
+        .eq("id", adventure.id);
 
       if (error) throw error;
       return updated;
@@ -44,8 +48,17 @@ export default function AdventureInfo({ adventure, themeTable, user}: { adventur
     const value = e.target.value;
     setForm((prev) => ({ ...prev, [field]: value }));
 
-    updateAdventure.mutate({ [field]: value });
+    // updateAdventure.mutate({ [field]: value });
   };
+  
+  useEffect(() => {
+    if (!adventure?.id) return;
+      updateAdventure.mutate({
+        name: debouncedForm.name,
+        notes: debouncedForm.notes,
+    });
+  }, [debouncedForm]);
+
 
   return (
     <div>

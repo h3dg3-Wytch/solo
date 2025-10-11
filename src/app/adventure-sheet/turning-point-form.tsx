@@ -1,9 +1,33 @@
 'use client';
 import { useState } from "react";
+import { useUser } from "../providers";
+import { createClient } from "@/utils/supabase/client";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 export default function TurningPointSheet() {
+  
+  const supabase = createClient();
+  const user = useUser(); 
+  
+  const { data: adventureEntries, isLoading, isError } = useQuery({
+    queryKey: ["adventure_entry", user?.id],
+    queryFn: async () => {
+      if (!user?.id) return [];
+      const { data, error } = await supabase
+        .from("adventure_entry")
+        .select("*")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false });
+
+        
+      if (error) throw error;
+      return data;
+    },
+    enabled: !!user, // only runs when user exists
+  });
+  
     
-     const [openEntry, setOpenEntry] = useState<{ type: string; index: number } | null>(null);
+  const [openEntry, setOpenEntry] = useState<{ type: string; index: number } | null>(null);
 
   const handleOpen = (type: string, index: number) => {
     setOpenEntry({ type, index });
@@ -13,8 +37,11 @@ export default function TurningPointSheet() {
     setOpenEntry(null);
   };
    
+    if (isLoading) return <p>Loading adventure entries...</p>;
+  if (isError) return <p>Failed to load adventure entries.</p>;
 
-    return (
+
+    return adventureEntries?.map(entry =>
   <div className="mb-6 p-4 border rounded-lg shadow-sm bg-white">
   {/* Header */}
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -27,6 +54,7 @@ export default function TurningPointSheet() {
         type="number"
         className="w-full border rounded-lg p-2"
         placeholder="e.g. 1"
+        value={entry.turning_point_number}
       />
     </div>
 
@@ -105,6 +133,7 @@ export default function TurningPointSheet() {
       rows={4}
       className="w-full border rounded-lg p-2"
       placeholder="Enter notes here..."
+      value={entry.notes}
     />
   </div>
 </div>

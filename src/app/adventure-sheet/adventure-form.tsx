@@ -4,10 +4,15 @@ import TurningPointSheet from "./turning-point-form";
 import Themes from "./themes";
 import AdventureInfo from "./adventure-info";
 import { defaultCharacterTable, defaultPlotLineTable } from "@/lib/constants";
+import { useUser } from "../providers";
 
 
 
-export default function AdventureForm( { adventureCrafter,  user }) {
+export default function AdventureForm( { adventureCrafter }) {
+  
+  
+  const user1 = useUser();
+  console.log('yeem', user1);
   
   console.log('weve in the component', adventureCrafter);
     const [turningPoints, setTurningPoints] = useState<number[]>([0]);
@@ -25,7 +30,7 @@ export default function AdventureForm( { adventureCrafter,  user }) {
     <div className="flex-1 flex flex-col gap-4">
     
      {adventureCrafter ? (
-  <AdventureInfo adventure={adventureCrafter.adventure} themeTable={adventureCrafter.themesTable} user={user}/>
+  <AdventureInfo adventure={adventureCrafter.adventure} themeTable={adventureCrafter.themesTable}/>
 ) : (
   <p>Loading...</p>
 )}
