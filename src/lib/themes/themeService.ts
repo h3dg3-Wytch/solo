@@ -14,11 +14,12 @@ const handleError = (error: any) => {
 };
 
 // Fetch all themes for a user
-export const getThemes = async (userId: string): Promise<Theme[]> => {
+export const getThemes = async (userId: string): Promise<Theme> => {
   const { data, error } = await supabase
     .from<Theme>('themes')
     .select('*')
-    .eq('user_id', userId);
+    .eq('user_id', userId)
+    .single();
 
   handleError(error);
   return data || [];

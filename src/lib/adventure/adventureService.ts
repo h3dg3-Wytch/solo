@@ -19,7 +19,7 @@ export const getAdventureByUserId = async (userId: String): Promise<Adventure| n
 };
 
 
-export const updateCharacter = async (
+export const updateAdventure = async (
   id: number,
   updates: Partial<Omit<Adventure, 'id' | 'created_at'>>
 ): Promise<Adventure> => {

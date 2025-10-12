@@ -5,7 +5,7 @@ import { chooseFromTable, randomNumberBetween, rollDie, toTable } from "../utils
 const IDENTITY_TWO_DESCRIPTORS_THRESHOLD = 33;
 const DESCRIPTORS_TWO_DESCRIPTORS_THRESHOLD = 21;
 
-export const CharacterTable = (
+export const CharacterInformationTable = (
     characterSpecialTraits,
     characterDescriptors,
     characterIdentity

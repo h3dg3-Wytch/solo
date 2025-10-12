@@ -3,48 +3,82 @@
 // add ways to update them 
 // create extension methods 
 
+import groupBy from "ramda/es/groupBy";
 import { getAdventureByUserId } from "../adventure/adventureService";
 import { getAdventureEntriesByUserId } from "../adventure_entry/adventureEntryServices";
 import { getCharacters } from "../character/characterService";
+import { CharacterInformationTable } from "../character/characterTable";
 import { getCharacterDescriptors } from "../character_descriptor/characterDescriptorService";
-import { getCharacterIdentities } from "../character_identity/characterDescriptorService";
+import { getCharacterIdentities } from "../character_identity/characterIdentityService";
 import { getCharacterSpecialTraits } from "../character_special_trait/characterSpecialTraits";
 import { getPlotPoints } from "../plot_point/plotPointServices";
+import { PlotPointTable } from "../plot_point/plotPointTable";
 import { getPlotlines } from "../plotline/plotlineService";
 import { PlotlineTable } from "../plotline/plotLineTable";
 import { getThemes } from "../themes/themeService";
+import { ThemeTable } from "../themes/themeTable";
 import { getTurningPointEntriesByUserId } from "../turning_point_entry/turningPointEntryService";
+import { prop } from "ramda";
 
-// CharacterTable
 export default async function AdventureCrafter(userId: string) {
-    
-    const characters = (await getCharacters(userId));
-    const plotlines = PlotlineTable(await getPlotlines(userId));
-    const themes = await getThemes(userId);
-    const adventure = await getAdventureByUserId(userId);
-    const adventureEntries = await getAdventureEntriesByUserId(userId)
-    const turningPointEntires = await getTurningPointEntriesByUserId(userId); 
-    const characterDescriptor = await getCharacterDescriptors();
-    const characterIdentity = await getCharacterIdentities();
-    const characterSpecialTraits = await getCharacterSpecialTraits();
-    const plotPoints = await getPlotPoints();
-     
-    console.log('adventure', adventure);
-    console.log('adventureEntries', adventureEntries);
-    console.log('desc', characterDescriptor);
-    console.log('identity', characterIdentity);
-    console.log('specialTraits', characterSpecialTraits);
-    console.log('plot points', plotPoints);
-    console.log('turning point entry', turningPointEntires);
+    return preprocessData(await fetchData(userId));
+}
+
+export async function fetchData(userId: string) {
+
+     const [
+        characters, 
+        plotlines,
+        themes, 
+        adventure, 
+        adventureEntries,
+        turningPointEntries,
+        characterDescriptors,
+        characterIdentities,
+        characterSpecialTraits,
+        plotPoints
+     ] = await Promise.all([
+        getCharacters(userId),
+        getPlotlines(userId),
+        getThemes(userId),
+        getAdventureByUserId(userId),
+        getAdventureEntriesByUserId(userId),
+        getTurningPointEntriesByUserId(userId), 
+        getCharacterDescriptors(),
+        getCharacterIdentities(),
+        getCharacterSpecialTraits(),
+        getPlotPoints()
+    ]);
     
     return {
-        characters,
-        toTablegetPlotLines: () => plotlines,
-        themes
+        characters, 
+        plotlines,
+        themes, 
+        adventure, 
+        adventureEntries,
+        turningPointEntries,
+        characterDescriptors,
+        characterIdentities,
+        characterSpecialTraits,
+        plotPoints
+    }
+}
+
+export function preprocessData(data) {
+    
+    console.log('themes', ThemeTable(data.themes))
+    
+
+
+    return {
+        turningPointEntries: groupBy(prop("adventure_entry_id"))(data.turningPointEntries),
+        characterInformationTable: CharacterInformationTable(data.characterSpecialTraits, data.characterDescriptor, data.characterIdentity),
+        plotlineTable: PlotlineTable(data.plotlines),
+        plotPointTable: PlotPointTable(data.plotPoints),
+        themesTable: ThemeTable(data.themes),
+        ...data
     }
 
-
-    
 }
 
 /* import { setPriority } from "os";

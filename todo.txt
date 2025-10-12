@@ -1,18 +1,16 @@
 auth - 
 	set up atuh - sign out 
-  reset password
 	read up on securing the site
-forms
-  login - x
-  signup route 
-figma 
-promises? RAMDA 
+
 nextjs
 - read more into how it works, routes, middleware, session mangement etc
 - deploy pipeline?
 check in on the prod server, it probably is breaking, go through the flows
-- make adventure crafter
-  make FP versions for each table
-  type + service for each table
+- pass in props and update for each form
+- clean up UI 
 
+- https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers
+- write the update policis for the individual tables 
+- add the defaults to the user inits so they don't like, go crazy on the overload
 
+- tech debt move services to components

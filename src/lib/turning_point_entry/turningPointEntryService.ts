@@ -7,12 +7,12 @@ const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_SECRET_KEY!
   )
 
-export const getTurningPointEntriesByUserId = async (userId: String): Promise<Adventure| null> => {
+export const getTurningPointEntriesByUserId = async (userId: String): Promise<TurningPointEntry[]| null> => {
   const { data, error } = await supabase
-    .from<TurningPointEntry>('turning_point_entry')
+    .from<TurningPointEntry[]>('turning_point_entry')
     .select('*')
-    .eq('user_id', userId)
-    .single();
+    .eq('user_id', userId);
+    
 
   handleError(error);
   return data;

@@ -1,4 +1,4 @@
-import { Adventure } from "./types";
+import { AdventureEntry } from "./types";
 import { handleError }  from "../utils";
 import { createClient } from "@supabase/supabase-js";
 
@@ -7,7 +7,7 @@ const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_SECRET_KEY!
   )
 
-export const getAdventureEntriesByUserId = async (userId: String): Promise<Adventure| null> => {
+export const getAdventureEntriesByUserId = async (userId: String): Promise<AdventureEntry| null> => {
   const { data, error } = await supabase
     .from<AdventureEntry>('adventure_entry')
     .select('*')

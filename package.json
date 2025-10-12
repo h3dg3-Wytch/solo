@@ -11,13 +11,17 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@supabase-cache-helpers/postgrest-react-query": "^1.13.6",
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.55.0",
+    "@tanstack/react-query": "^5.90.2",
+    "@tanstack/react-query-devtools": "^5.90.2",
     "next": "15.4.7",
     "ramda": "^0.31.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "supabase": "^2.34.3"
+    "supabase": "^2.34.3",
+    "use-debounce": "^10.0.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
