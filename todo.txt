@@ -16,3 +16,10 @@ check in on the prod server, it probably is breaking, go through the flows
 - tech debt move services to components
 - update the info 
 - set up the server to allow sign in 
+
+- set plootlien name to select one of the plotlines
+- update the entry
+- new entry 
+- calc off table, plot point character. modal? 
+- add to that point 
+- update the plitlines lies character list add to if you click it goes to that page 
