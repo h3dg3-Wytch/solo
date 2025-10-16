@@ -36,13 +36,9 @@ export default function AdventureForm( { adventureCrafter }) {
 )}
 
   
-      {/* Turning Points */}
-      {turningPoints.map((id) => (
-        <div key={id} className="mb-4">
-          <TurningPointSheet />
-        </div>
-      ))}
-
+      
+      <TurningPointSheet />
+     
       {/* Add Turning Point Button */}
       <div className="flex justify-center mt-2">
         <button
