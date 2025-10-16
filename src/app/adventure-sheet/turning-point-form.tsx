@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { useUser } from "../providers";
+import { useAppData, useUser } from "../providers";
 import { createClient } from "@/utils/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAdventureEntries } from "./hooks";
@@ -9,6 +9,7 @@ export default function TurningPointSheet() {
   
   const supabase = createClient();
   const user = useUser(); 
+  const { plotPoints, descriptors, identities, traits} = useAppData()
   
   const { data: adventureEntries, isLoading, isError } = useAdventureEntries(user?.id);
   

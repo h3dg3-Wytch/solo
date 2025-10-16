@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ReactQueryClientProvider, UserProvider } from "./providers";
+import { AppDataProvider, ReactQueryClientProvider, UserProvider } from "./providers";
 import { createClient } from "@/utils/supabase/server";
 import Header from "./header";
 
@@ -39,8 +39,10 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
             <UserProvider initialUser={user}>
-              <Header/>
-              <main className="max-w-7xl mx-auto p-4">{children}</main>
+              <AppDataProvider>
+                <Header/>
+                <main className="max-w-7xl mx-auto p-4">{children}</main>
+              </AppDataProvider>
               </UserProvider>
         </body>
       </html>
