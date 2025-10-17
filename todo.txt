@@ -20,6 +20,6 @@ check in on the prod server, it probably is breaking, go through the flows
 - set plootlien name to select one of the plotlines
 - update the entry
 - new entry 
-- calc off table, plot point character. modal? 
+- calc off table, plot point character. modal logic 
 - add to that point 
 - update the plitlines lies character list add to if you click it goes to that page 
