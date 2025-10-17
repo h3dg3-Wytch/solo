@@ -25,5 +25,5 @@ export async function signup(formData: FormData) {
   }
 
   revalidatePath('/', 'layout')
-  redirect('/adventure-sheet')
+  redirect('/')
 }

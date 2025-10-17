@@ -37,7 +37,7 @@ export default function AdventureForm( { adventureCrafter }) {
 
   
       
-      <TurningPointSheet />
+      <TurningPointSheet themes={adventureCrafter.themesTable} />
      
       {/* Add Turning Point Button */}
       <div className="flex justify-center mt-2">

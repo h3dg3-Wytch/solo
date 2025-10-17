@@ -4,15 +4,63 @@ import { useAppData, useUser } from "../providers";
 import { createClient } from "@/utils/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAdventureEntries } from "./hooks";
+import { Modal } from "./modal";
 
-export default function TurningPointSheet() {
+export default function TurningPointSheet( themes ) {
   
-  const supabase = createClient();
   const user = useUser(); 
-  const { plotPoints, descriptors, identities, traits} = useAppData()
+  
+  if(user === null) {
+    return <p>Loading...</p>
+  }
+  
   
   const { data: adventureEntries, isLoading, isError } = useAdventureEntries(user?.id);
   
+
+  const [randomized, setRandomized] = useState<{ entryId: number, plotPoint: any, trait: any } | null>(null);
+
+  const handleRandomize = (entryId: number) => {
+    // const plotPoint = plotPoints[Math.floor(Math.random() * plotPoints.length)];
+    // const trait = traits[Math.floor(Math.random() * traits.length)];
+    // setRandomized({ entryId, plotPoint, trait });
+    // 
+    console.log('we random duaaa');
+  };
+  
+  const handleSaveRandomized = async () => {
+    /* if (!randomized) return;
+
+    const { entryId, plotPoint, trait } = randomized;
+
+    // Update the adventure entry with the randomized values
+    const { error } = await supabase
+      .from("turning_point_entry")
+      .update({
+        plot_point_id: plotPoint.id,
+        character_id: null, // leave character blank unless you want to randomize that too
+      })
+      .eq("adventure_entry_id", entryId)
+      .select();
+
+    if (error) {
+      console.error("Error updating:", error);
+    } else {
+      console.log("Updated successfully");
+      setRandomized(null);
+    }
+  }; */
+  }
+  
+  
+  const [modalData, setModalData] = useState<any | null>(null);
+
+  
+  const handleOpenModal = (type: string, value: any) => {
+    setModalData({ type, value });
+  };
+
+  const handleCloseModal = () => setModalData(null);
     
   const [openEntry, setOpenEntry] = useState<{ type: string; index: number } | null>(null);
 
@@ -27,21 +75,16 @@ export default function TurningPointSheet() {
   if (isLoading) return <p>Loading adventure entries...</p>;
   if (isError) return <p>Failed to load adventure entries.</p>;
 
-    return adventureEntries?.map(entry =>
-  <div className="mb-6 p-4 border rounded-lg shadow-sm bg-white">
+    return (<>
+    {adventureEntries?.map(entry =>
+  <div key={entry.id} className="mb-6 p-4 border rounded-lg shadow-sm bg-white">
   {/* Header */}
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
     {/* Entry Number */}
     <div>
       <label className="block text-sm font-semibold mb-1">
-        Turning Point Entry #
+        Turning Point Entry # {entry.turning_point_number}
       </label>
-      <input
-        type="number"
-        className="w-full border rounded-lg p-2"
-        placeholder="e.g. 1"
-        value={entry.turning_point_number}
-      />
     </div>
 
      {/* Plotline Name */}
@@ -52,6 +95,7 @@ export default function TurningPointSheet() {
         className="w-full border rounded-lg p-2"
         placeholder="Enter plotline name"
         value={entry.plotline.name}
+        onChange={() => {}}
       />
     </div>
 
@@ -86,7 +130,7 @@ export default function TurningPointSheet() {
             />
             <button
               className="ml-1 px-2 py-1 border rounded-md text-xs bg-gray-100 hover:bg-gray-200"
-              onClick={() => console.log(`Plot Point ${idx + 1} details`, tp)}
+              onClick={() => handleOpenModal("plot_point", tp?.plot_point)}
             >
               +
             </button>
@@ -114,7 +158,7 @@ export default function TurningPointSheet() {
             />
             <button
               className="ml-1 px-2 py-1 border rounded-md text-xs bg-gray-100 hover:bg-gray-200"
-              onClick={() => console.log(`Character ${idx + 1} details`, tp)}
+              onClick={() => handleOpenModal("character", tp?.character)}
             >
               +
             </button>
@@ -133,11 +177,41 @@ export default function TurningPointSheet() {
       className="w-full border rounded-lg p-2"
       placeholder="Enter notes here..."
       value={entry.notes}
+        onChange={() => {}}
     />
   </div>
 </div>
  
-    );
+    )}
+    <Modal
+        isOpen={!!modalData}
+        onClose={handleCloseModal}
+        title={modalData?.type === "plot_point" ? "Plot Point Details" : "Character Details"}
+      >
+        <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg shadow-xl w-96">
+            <h2 className="text-lg font-bold mb-4">Randomized Result</h2>
+            <p><strong>Plot Point:</strong> {}</p>
+            <p><strong>Theme:</strong> {}</p>
+            <div className="flex justify-end gap-2 mt-4">
+              <button
+                className="px-4 py-2 bg-gray-300 rounded-lg"
+                onClick={handleCloseModal}
+              >
+                Cancel
+              </button>
+              <button
+                className="px-4 py-2 bg-green-600 text-white rounded-lg"
+                onClick={handleSaveRandomized}
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </Modal>
+    </>);
+    
   
 }
 

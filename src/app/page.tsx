@@ -1,111 +1,88 @@
 'use client'
-import Image from "next/image";
-import { redirect } from 'next/navigation'
-import { pipe, values, filter, propEq, map, tap, groupBy, prop} from 'ramda';
-import { useEffect } from "react";
-import { AdventureCrafter } from "@/lib/adventure/adventure";
 
-export default async function Home() {
-  
-  
-  return (
-    
-    <div  className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-      <h1>heading</h1>
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+import Link from 'next/link'
+import { useUser } from './providers'  // adjust import if needed
+
+export default function HomePage() {
+  const user = useUser()
+
+  if (!user) {
+    // Signed-out Landing Page
+    return (
+      <main className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
+        <div className="max-w-2xl text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+            Adventure Crafter
+          </h1>
+          <p className="mt-6 text-lg text-gray-700">
+            Adventure Crafter helps you design dynamic adventures with characters, plotlines,
+            and turning points — giving your stories structure and spontaneity.
+          </p>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <Link
+              href="/login"
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className="px-6 py-3 bg-gray-100 text-gray-800 font-semibold rounded-lg border hover:bg-gray-200 transition"
+            >
+              Sign Up
+            </Link>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    )
+  }
+
+  // Signed-in Dashboard
+  return (
+    <main className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto text-center py-20 px-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+          Adventure Crafter
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Build dynamic adventures with characters, plotlines, and turning points.
+        </p>
+      </section>
+
+      {/* Navigation Cards */}
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 pb-20">
+        <Link
+          href="/adventure-sheet"
+          className="bg-white shadow-sm rounded-2xl p-6 border hover:shadow-md transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h2 className="text-xl font-semibold text-gray-800">Start New Adventure</h2>
+          <p className="mt-2 text-gray-600">
+            Create a fresh adventure with plotlines, turning points, and notes.
+          </p>
+        </Link>
+
+        <Link
+          href="#"
+          className="bg-white shadow-sm rounded-2xl p-6 border cursor-not-allowed shadow-md"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h2 className="text-xl font-semibold text-gray-800">View Adventures</h2>
+          <p className="mt-2 text-gray-600">
+            Browse and continue your saved adventures.
+          </p>
+        </Link>
+
+        <Link
+          href="/generators"
+          className="bg-white shadow-sm rounded-2xl p-6 border  cursor-not-allowed shadow-md"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+          <h2 className="text-xl font-semibold text-gray-800">Generators</h2>
+          <p className="mt-2 text-gray-600">
+            Explore plot points, descriptors, identities, and special traits.
+          </p>
+        </Link>
+      </section>
+    </main>
+  )
 }
