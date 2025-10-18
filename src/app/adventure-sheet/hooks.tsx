@@ -222,10 +222,10 @@ export function useThemes(userId?: string) {
         .from("themes")
         .select("*")
         .eq("user_id", userId)
-        .order("id", { ascending: true });
+        .single();
 
       if (error) throw error;
-      return data as Theme[];
+      return data as Theme;
     },
     enabled: !!userId, // don’t fetch if user not logged in
   });

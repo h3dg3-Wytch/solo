@@ -4,6 +4,7 @@ import { createClient } from "@/utils/supabase/client";
 const themes = ["social", "mystery", "tension", "personal", "action"]; // or however you define these
 
 export default function Themes({ themeTable }) {
+  console.log('wergha', themeTable)
   const queryClient = useQueryClient();
   const supabase = createClient(); 
 

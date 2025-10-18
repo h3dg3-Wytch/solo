@@ -15,8 +15,6 @@ import { SelectionList } from "./SelectionList";
 
 export default function AdventureForm() {
   
-  
-  
   const user = useUser();
   
   const { data: adventure, isLoading, isError } = useAdventure(user?.id);
@@ -56,8 +54,8 @@ export default function AdventureForm() {
         </div>
 
       <div className="hidden md:flex flex-col gap-6 w-80">
-        <SelectionList title={"Plotlines"} items={plotlines} />
-        <SelectionList title={"Characters"}items={characters} /> 
+        <SelectionList title={"Plotlines"} items={plotlines} link={"plotline"} />
+        <SelectionList title={"Characters"} items={characters} link={"character"}/> 
       </div>
     </div>
     </div>);
