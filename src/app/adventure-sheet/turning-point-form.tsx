@@ -6,6 +6,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAdventureEntries } from "./hooks";
 import { Modal } from "./modal";
 import { PlotPointsInvoked } from "./plot-points-invoked";
+import { CharactersInvoked } from "./characters-invoked";
 
 export default function TurningPointSheet( themes ) {
   
@@ -116,32 +117,7 @@ export default function TurningPointSheet( themes ) {
     {/* Plot Points Column */}
       <PlotPointsInvoked entry={entry}/>
   {/* Characters Invoked Column */}
-  <div>
-    <h2 className="text-lg font-semibold mb-2">Characters Invoked</h2>
-    <div className="space-y-3">
-      {Array.from({ length: 5 }).map((_, idx) => {
-        const tp = entry.turning_point_entry?.[idx];
-        const value = tp?.character?.name ?? "";
-
-        return (
-          <div key={idx} className="flex items-center">
-            <input
-              type="text"
-              className="flex-1 border rounded-lg p-2"
-              placeholder={`Character ${idx + 1}`}
-              defaultValue={value}
-            />
-            <button
-              className="ml-1 px-2 py-1 border rounded-md text-xs bg-gray-100 hover:bg-gray-200"
-              onClick={() => handleOpenModal("character", tp?.character)}
-            >
-              +
-            </button>
-          </div>
-        );
-      })}
-    </div>
-  </div>
+      <CharactersInvoked entry={entry} />
   </div>
 
   {/* Notes Section */}
