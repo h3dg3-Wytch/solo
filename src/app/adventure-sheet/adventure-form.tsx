@@ -5,24 +5,29 @@ import Themes from "./themes";
 import AdventureInfo from "./adventure-info";
 import { defaultCharacterTable, defaultPlotLineTable } from "@/lib/constants";
 import { useUser } from "../providers";
+import { useCreateAdventureWithTurningPoints } from './hooks';
+import { PlotlinesSelection } from "./plotlines-selection";
+import { CharactersSelection } from "./characters-selection";
 
 
 
 export default function AdventureForm( { adventureCrafter }) {
   
   
-  const user1 = useUser();
-  console.log('yeem', user1);
+  const createAdventureWithTP = useCreateAdventureWithTurningPoints();
   
-  console.log('weve in the component', adventureCrafter);
-    const [turningPoints, setTurningPoints] = useState<number[]>([0]);
-
+  const user = useUser();
+  
   const addTurningPoint = () => {
-    setTurningPoints((prev) => [...prev, prev.length]);
+    
+    createAdventureWithTP.mutate({
+      user_id: user?.id,
+      adventure_id: adventureCrafter.adventure.id,      // optional
+    });
   };
   
    return (
-   <div className="bg-white text-gray-900 p-6 max-w-7xl mx-auto rounded-2xl shadow">
+ <div className="bg-white text-gray-900 p-6 max-w-7xl mx-auto rounded-2xl shadow">
   <h1 className="text-2xl font-bold mb-4">Adventure Sheet</h1>
 
   <div className="flex flex-col md:flex-row gap-6">
@@ -50,33 +55,10 @@ export default function AdventureForm( { adventureCrafter }) {
       </div>
     </div>
 
-<div className="hidden md:flex flex-col gap-6 w-80">
-  {/* Plotlines */}
-  <div className="sticky top-0 bg-white z-10">
-    <h2 className="text-lg font-bold mb-2">Plotlines</h2>
-    <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
-      {Object.keys(defaultPlotLineTable).map((index) => (
-        <div key={index} className="py-0.5 border-b last:border-b-0">
-          <label className="font-semibold mr-1">{index}:</label>
-          <span className="text-sm">{defaultPlotLineTable[index]}</span>
-        </div>
-      ))}
-    </div>
+  <div className="hidden md:flex flex-col gap-6 w-80">
+    <PlotlinesSelection plotlines={null} />
+    <CharactersSelection characters={null} /> 
   </div>
-
-  {/* Other Characters */}
-  <div className="sticky top-[350px] bg-white z-10">
-    <h2 className="text-lg font-bold mb-2">Character List</h2>
-    <div className="border rounded-lg h-[300px] overflow-y-auto p-2">
-      {Object.keys(defaultCharacterTable).map((index) => (
-        <div key={index} className="py-0.5 border-b last:border-b-0">
-          <label className="font-semibold mr-1">{index}:</label>
-          <span className="text-sm">{defaultCharacterTable[index]}</span>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
 </div>
 </div>);
 }

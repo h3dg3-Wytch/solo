@@ -39,13 +39,13 @@ export const ThemeTable = ({
 
 export function toggleLowestPriorityTheme(table: Theme) {
 
-    return themeTable(table.firstPriority,
-        table.secondPriority,
-        table.thirdPriority,
-        table.fourthPriority,
-        table.fifthPriority,
-        !table.isCurrentlyOnFourth
-    )
+    return ThemeTable(
+      {
+        ...table,
+        isCurrentlyOnFourth: !table.isCurrentlyOnFourth
+      }
+    );
+
 }
 
 export function generateRandomPriorityTable() {

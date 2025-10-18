@@ -1,6 +1,6 @@
 import { createClient } from "@/utils/supabase/client";
 import { useUser } from "../providers";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery,useQueryClient, useMutation } from "@tanstack/react-query";
 
 
 const supabase = createClient();
@@ -76,3 +76,85 @@ const { data, error } = await supabase
     return data;
 
 }
+
+export function useCreateTurningPointEntry() {
+  const queryClient = useQueryClient();
+  const supabase = createClient();
+
+  return useMutation({
+    mutationFn: async (newEntry: {
+      adventure_entry_id: number;
+      plot_point_id?: number;
+      character_id?: number;
+      position?: number;
+    }) => {
+      const { data, error } = await supabase
+        .from("turning_point_entry")
+        .insert(newEntry)
+        .select("*")
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: () => {
+      // refresh entries after insert
+      queryClient.invalidateQueries(["adventure_entries"]);
+    },
+  });
+}
+
+export function useCreateAdventureWithTurningPoints() {
+  const queryClient = useQueryClient();
+  const supabase = createClient();
+
+  return useMutation({
+    mutationFn: async ({
+      user_id,
+      adventure_id,
+    }: {
+      user_id: string;
+      adventure_id?: number | null;
+    }) => {
+      // Step 1: Create the adventure_entry
+      const { data: adventureEntry, error: advError } = await supabase
+        .from("adventure_entry")
+        .insert([
+          {
+            user_id,
+            adventure_id,
+            turning_point_number: null,
+            notes: null,
+          },
+        ])
+        .select("*")
+        .single();
+
+      if (advError) throw advError;
+
+      // Step 2: Create 5 turning_point_entries tied to that adventure_entry
+      const turningPointsPayload = Array.from({ length: 5 }).map((_, idx) => ({
+        adventure_entry_id: adventureEntry.id,
+        user_id,
+        position: idx + 1,
+      }));
+
+      const { data: turningPoints, error: tpError } = await supabase
+        .from("turning_point_entry")
+        .insert(turningPointsPayload)
+        .select("*");
+
+      if (tpError) throw tpError;
+
+      return {
+        adventureEntry,
+        turningPoints,
+      };
+    },
+
+    onSuccess: () => {
+      // Invalidate so UI refreshes
+      queryClient.invalidateQueries(["adventure_entries"]);
+    },
+  });
+}
+
