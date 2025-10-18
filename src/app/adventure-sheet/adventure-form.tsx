@@ -44,8 +44,6 @@ export default function AdventureForm() {
         <div className="flex-1 flex flex-col gap-4">
           <AdventureInfo adventure={adventure} themeTable={themes}/>
           <TurningPointSheet themes={themes} />
-         
-          {/* Add Turning Point Button */}
           <div className="flex justify-center mt-2">
             <button
               onClick={addTurningPoint}
