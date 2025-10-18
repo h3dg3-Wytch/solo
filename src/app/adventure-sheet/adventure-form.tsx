@@ -9,6 +9,7 @@ import { useAdventure, useCharacters, useCreateAdventureWithTurningPoints, usePl
 import { PlotlinesSelection } from "./plotlines-selection";
 import { CharactersSelection } from "./characters-selection";
 import { ThemeTable } from "@/lib/themes/themeTable";
+import { SelectionList } from "./SelectionList";
 
 
 
@@ -55,8 +56,8 @@ export default function AdventureForm() {
         </div>
 
       <div className="hidden md:flex flex-col gap-6 w-80">
-        <PlotlinesSelection plotlines={plotlines} />
-        <CharactersSelection characters={characters} /> 
+        <SelectionList title={"Plotlines"} items={plotlines} />
+        <SelectionList title={"Characters"}items={characters} /> 
       </div>
     </div>
     </div>);

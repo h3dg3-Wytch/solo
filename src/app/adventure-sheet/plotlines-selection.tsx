@@ -1,7 +1,5 @@
 'use-client';
 
-import { defaultPlotLineTable } from "@/lib/constants";
-
 export function PlotlinesSelection({ plotlines }) {
     
     console.log(plotlines);
