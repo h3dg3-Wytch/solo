@@ -1,6 +1,10 @@
 import { createClient } from "@/utils/supabase/client";
 import { useUser } from "../providers";
 import { useQuery,useQueryClient, useMutation } from "@tanstack/react-query";
+import { Adventure } from "@/lib/adventure/types";
+import { Theme } from "@/lib/themes/types";
+import { Plotline } from "@/lib/plotline/types";
+import { Character } from "@/lib/character/types";
 
 
 const supabase = createClient();
@@ -153,8 +157,114 @@ export function useCreateAdventureWithTurningPoints() {
 
     onSuccess: () => {
       // Invalidate so UI refreshes
-      queryClient.invalidateQueries(["adventure_entries"]);
+      queryClient.invalidateQueries(["adventure_entry"]);
     },
   });
 }
 
+export function useUpdateAdventure(adventureId: number) {
+  const queryClient = useQueryClient();
+  const supabase = createClient();
+
+  return useMutation({
+    mutationFn: async (updated: Partial<Adventure>) => {
+      const { data, error } = await supabase
+        .from("adventure")
+        .update(updated)
+        .eq("id", adventureId)
+        .select("*")
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (updated) => {
+      // update cached adventure by ID
+      queryClient.setQueryData<Adventure>(["adventure", adventureId], (old) =>
+        old ? { ...old, ...updated } : updated
+      );
+      // also refresh any lists if needed
+      queryClient.invalidateQueries(["adventures"]);
+    },
+  });
+}
+
+
+export function useAdventure(userId?: number) {
+  const supabase = createClient();
+
+  return useQuery({
+    queryKey: ["adventure", userId],
+    queryFn: async () => {
+      if (!userId) return null;
+
+      const { data, error } = await supabase
+        .from("adventure")
+        .select("*")
+        .eq("user_id", userId)
+        .single();
+
+      if (error) throw error;
+      return data as Adventure;
+    },
+    enabled: !!userId, // don’t run if id is missing
+  });
+}
+
+
+export function useThemes(userId?: string) {
+  return useQuery({
+    queryKey: ["themes", userId],
+    queryFn: async () => {
+      if (!userId) return [];
+
+      const { data, error } = await supabase
+        .from("themes")
+        .select("*")
+        .eq("user_id", userId)
+        .order("id", { ascending: true });
+
+      if (error) throw error;
+      return data as Theme[];
+    },
+    enabled: !!userId, // don’t fetch if user not logged in
+  });
+}
+
+export function usePlotlines(userId?: string) {
+  return useQuery({
+    queryKey: ["plotlines", userId],
+    queryFn: async () => {
+      if (!userId) return [];
+
+      const { data, error } = await supabase
+        .from("plotline")
+        .select("*")
+        .eq("user_id", userId)
+        .order("id", { ascending: true });
+
+      if (error) throw error;
+      return data as Plotline[];
+    },
+    enabled: !!userId,
+  });
+}
+
+export function useCharacters(userId?: string) {
+  return useQuery({
+    queryKey: ["characters", userId],
+    queryFn: async () => {
+      if (!userId) return [];
+
+      const { data, error } = await supabase
+        .from("character")
+        .select("*")
+        .eq("user_id", userId)
+        .order("id", { ascending: true });
+
+      if (error) throw error;
+      return data as Character[];
+    },
+    enabled: !!userId,
+  });
+}

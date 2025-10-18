@@ -7,12 +7,13 @@ import Themes from "./themes";
 import AdventureCrafter from "@/lib/AdventureCrafter/adventureCrafter";
 import { createClient } from "@/utils/supabase/client";
 import { useDebounce } from "use-debounce";
+import { useUpdateAdventure } from "./hooks";
 
 
 export default function AdventureInfo({ adventure, themeTable }: { adventure: Adventure, themeTable: any }) {
-  console.log("in the theme table") 
   
   
+  console.log('in advenutre info', adventure)
   const supabase = createClient(); 
   const queryClient = useQueryClient();
   const [form, setForm] = useState({
@@ -23,25 +24,7 @@ export default function AdventureInfo({ adventure, themeTable }: { adventure: Ad
 
   const [debouncedForm] = useDebounce(form, 500);
   // --- Update mutation
-  const updateAdventure = useMutation({
-    mutationFn: async (updated: Partial<Adventure>) => {
-
-      const { error } = await supabase
-        .from("adventure")
-        .update(updated)
-        .eq("id", adventure.id);
-
-      if (error) throw error;
-      return updated;
-    },
-    onSuccess: (updated) => {
-      // Optimistically update the cache
-      queryClient.setQueryData(["adventure", adventure.id], {
-        ...adventure,
-        ...updated,
-      });
-    },
-  });
+  const updateAdventure = useUpdateAdventure(adventure.id);
 
   // --- Change handler
   const handleChange = (field: keyof Adventure) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
