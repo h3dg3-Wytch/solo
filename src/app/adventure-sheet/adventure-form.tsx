@@ -22,18 +22,19 @@ export default function AdventureForm() {
   const { data: plotlines } = usePlotlines(user?.id);
   const { data: characters } = useCharacters(user?.id);
   
+  const createAdventureWithTurningPoints = useCreateAdventureWithTurningPoints();
+  
   if (isLoading) return <p>Loading adventure...</p>;
   if (isLoadingThemes) return <p>Loading themes...</p>;
   
  
   
   const addTurningPoint = () => {
-    
-    // createAdventureWithTP.mutate({
-    //   user_id: user?.id,
-    //   adventure_id: adventureCrafter.adventure.id,      // optional
-    // });
-  };
+    createAdventureWithTurningPoints.mutate({
+       user_id: user?.id,
+       adventure_id: adventure?.id,      // optional
+    });
+  }
   
    return (
      <div className="bg-white text-gray-900 p-6 max-w-7xl mx-auto rounded-2xl shadow">
@@ -42,7 +43,7 @@ export default function AdventureForm() {
         {/* Left side: AdventureInfo + TurningPointSheets + Add Button */}
         <div className="flex-1 flex flex-col gap-4">
           <AdventureInfo adventure={adventure} themeTable={themes}/>
-          <TurningPointSheet themes={themes} />
+          <TurningPointSheet themes={themes} plotlines={plotlines} characters={characters} />
           <div className="flex justify-center mt-2">
             <button
               onClick={addTurningPoint}

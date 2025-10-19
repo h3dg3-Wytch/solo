@@ -9,8 +9,9 @@ import { PlotPointsInvoked } from "./plot-points-invoked";
 import { CharactersInvoked } from "./characters-invoked";
 import { TurningPointHeader } from "./turning-point-header";
 import { TurningPointNotes } from "./turning-points-notes";
+import { PlotPointTable } from "@/lib/plot_point/plotPointTable";
 
-export default function TurningPointSheet( themes ) {
+export default function TurningPointSheet( { themes, plotlines, characters }) {
   
   const user = useUser(); 
   
@@ -20,6 +21,8 @@ export default function TurningPointSheet( themes ) {
   
   const { plotPoints }= useAppData();
   
+  
+  console.log('safd',plotPoints, PlotPointTable(plotPoints), "why")
   const { data: adventureEntries, isLoading, isError } = useAdventureEntries(user?.id);
   
 
@@ -64,11 +67,11 @@ export default function TurningPointSheet( themes ) {
 
     return (
       <>
-        {adventureEntries?.map(entry => <div key={entry.id} className="mb-6 p-4 border rounded-lg shadow-sm bg-white">
-          <TurningPointHeader entry={entry}/>
+        {adventureEntries?.map((entry, index) => <div key={entry.id} className="mb-6 p-4 border rounded-lg shadow-sm bg-white">
+          <TurningPointHeader entry={entry} index={index + 1} plotlines={plotlines}/>
     
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <PlotPointsInvoked entry={entry} themes={themes} plotPoints={plotPoints}/>
+              <PlotPointsInvoked entry={entry} themes={themes} plotPoints={PlotPointTable(plotPoints)}/>
               <CharactersInvoked entry={entry} />
           </div>
 

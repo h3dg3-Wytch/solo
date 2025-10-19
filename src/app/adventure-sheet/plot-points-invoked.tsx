@@ -3,32 +3,30 @@
 import { useState } from "react";
 import { Modal } from "./modal";
 import { chooseFromTable, rollDie } from "@/lib/utils";
-import { toggleLowestPriorityTheme } from "@/lib/themes/themeTable";
+import { ThemeTable, toggleLowestPriorityTheme } from "@/lib/themes/themeTable";
 import { PlotPointTable } from "@/lib/plot_point/plotPointTable";
 import { get } from "http";
-import { useCreateTurningPointEntry } from "./hooks";
+import { useCreateTurningPointEntry, useUpdateTurningPointEntry } from "./hooks";
 import { useUser } from "../providers";
 
 
 export function PlotPointsInvoked({ entry, plotPoints, themes }) {
   const [modalData, setModalData] = useState<any | null>(null);
-  const [themesTable, setThemesTable] = useState(themes.themes);
-  // const [plotPointsTable, setPlotPointsTable] = useState(PlotPointTable(plotPoints));
+  const [themesTable, setThemesTable] = useState(ThemeTable(themes));
+  const [plotPointsTable, setPlotPointsTable] = useState(plotPoints);
 
-
-  const createTurningPointEntry = useCreateTurningPointEntry();
+  const updateTurningPointEntry = useUpdateTurningPointEntry()
 
   const user = useUser();
   
   const handleSave = () => {
     if (!modalData) return;
 
-    createTurningPointEntry.mutate({
-      adventure_entry_id: entry.id,
-      plot_point_id: modalData.plotPoint?.id,
-      character_id: rollDie(100), // or from modal if you include character
-      position: entry.turning_point_entry?.length ?? 0, // place after existing
-    });
+    updateTurningPointEntry.mutate({
+      id: modalData?.id,
+      updated: {plot_point_id: modalData?.plotPoint?.id}
+    }
+    );
     setModalData(null);
   };
 
@@ -36,7 +34,6 @@ export function PlotPointsInvoked({ entry, plotPoints, themes }) {
 
   const getRandomTheme = () => {
     const theme = chooseFromTable(rollDie(10), themesTable);
-    setThemesTable(toggleLowestPriorityTheme(themesTable));
     return theme;
   };
   
@@ -44,13 +41,15 @@ export function PlotPointsInvoked({ entry, plotPoints, themes }) {
     return chooseFromTable(rollDie(100), plotPointsTable[theme])
   }
 
-  const handleOpenModal = (plotPoint: any) => {
+  const handleOpenModal = (plotPoint: any, id: any) => {
     const randomTheme = getRandomTheme();
     const randomPlotPoint = getRandomPlotPoint(randomTheme);
+    setThemesTable(toggleLowestPriorityTheme(themesTable));
     setModalData({
       type: "plot_point",
       plotPoint: randomPlotPoint,
       theme: randomTheme,
+      id
     });
   };
 
@@ -76,7 +75,7 @@ export function PlotPointsInvoked({ entry, plotPoints, themes }) {
                 />
                 <button
                   className="ml-1 px-2 py-1 border rounded-md text-xs bg-gray-100 hover:bg-gray-200"
-                  onClick={() => handleOpenModal(tp?.plot_point)}
+                  onClick={(e)=> handleOpenModal(tp?.plot_point, tp?.id )}
                 >
                   +
                 </button>

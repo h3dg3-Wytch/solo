@@ -1,6 +1,8 @@
 'use client';
 
-export function TurningPointHeader({entry}) {
+export function TurningPointHeader({entry, index, plotlines}) {
+    
+    console.log("the sorrws", plotlines);
     
     const determinePlotlineType = (plotline) => { 
       if (!plotline) return ""; // fallback
@@ -16,20 +18,24 @@ export function TurningPointHeader({entry}) {
         {/* Entry Number */}
         <div>
           <label className="block text-sm font-semibold mb-1">
-            Turning Point Entry # {entry.turning_point_number}
+            Turning Point Entry # {index}
           </label>
         </div>
 
          {/* Plotline Name */}
         <div>
           <label className="block text-sm font-semibold mb-1">Plotline Name</label>
-          <input
-            type="text"
-            className="w-full border rounded-lg p-2"
-            placeholder="Enter plotline name"
-            value={entry.plotline.name}
-            onChange={() => {}}
-          />
+     <select
+  defaultValue={entry.plotline_id ?? ""}
+  className="w-full border rounded-lg p-2"
+>
+  <option value="">Select a Plotline...</option>
+  {plotlines?.map((plotline) => (
+    <option key={plotline.id} value={plotline.id}>
+      {plotline.name ?? plotline.default_value}
+    </option>
+  ))}
+</select>
         </div>
 
         {/* Plotline Type */}

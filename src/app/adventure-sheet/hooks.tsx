@@ -5,6 +5,7 @@ import { Adventure } from "@/lib/adventure/types";
 import { Theme } from "@/lib/themes/types";
 import { Plotline } from "@/lib/plotline/types";
 import { Character } from "@/lib/character/types";
+import { TurningPointEntry } from "@/lib/turning_point_entry/types";
 
 
 const supabase = createClient();
@@ -83,14 +84,10 @@ const { data, error } = await supabase
 
 export function useCreateTurningPointEntry() {
   const queryClient = useQueryClient();
-  const supabase = createClient();
 
   return useMutation({
     mutationFn: async (newEntry: {
-      adventure_entry_id: number;
       plot_point_id?: number;
-      character_id?: number;
-      position?: number;
     }) => {
       const { data, error } = await supabase
         .from("turning_point_entry")
@@ -266,5 +263,28 @@ export function useCharacters(userId?: string) {
       return data as Character[];
     },
     enabled: !!userId,
+  });
+}
+
+export function useUpdateTurningPointEntry() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ id, updated }: { id: number; updated: Partial<TurningPointEntry>}) => {
+      const { data, error } = await supabase
+        .from("turning_point_entry")
+        .update(updated)
+        .eq("id", id)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      // Refresh both the parent query and turning point entry cache
+      queryClient.invalidateQueries(["turning_point_entries"]);
+      queryClient.invalidateQueries(["turning_point_entry", data.id]);
+      queryClient.invalidateQueries(["adventure_entries"]);
+    },
   });
 }
