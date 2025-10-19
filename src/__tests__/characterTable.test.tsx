@@ -1,6 +1,5 @@
 
-import { adventureTables } from "@/lib/adventureTables";
-import { CharacterTable, generateRandomCharacter, generateSpecialTrait} from "@/lib/character/characterTable";
+import { CharacterInformationTable, generateRandomCharacter, generateSpecialTrait} from "@/lib/character/characterTable";
 import * as utils from "@/lib/utils";
 import * as R from "ramda";
 
@@ -22,7 +21,7 @@ describe('Character Table', () => {
         (utils.rollDie as jest.Mock).mockReturnValue(1); 
         (utils.randomNumberBetween as jest.Mock).mockReturnValue(100); 
         
-        const actual = CharacterTable(characterSpecialTraits, characterIdentiy, characterDescriptors);
+        const actual = CharacterInformationTable(characterSpecialTraits, characterIdentiy, characterDescriptors);
         
         const expected = actual.specialTraits[1];
         
