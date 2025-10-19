@@ -10,6 +10,7 @@ import { CharactersInvoked } from "./characters-invoked";
 import { TurningPointHeader } from "./turning-point-header";
 import { TurningPointNotes } from "./turning-points-notes";
 import { PlotPointTable } from "@/lib/plot_point/plotPointTable";
+import { CharacterInformationTable } from "@/lib/character/characterTable";
 
 export default function TurningPointSheet( { themes, plotlines, characters }) {
   
@@ -19,7 +20,12 @@ export default function TurningPointSheet( { themes, plotlines, characters }) {
     return <p>Loading...</p>
   }
   
-  const { plotPoints }= useAppData();
+  const { 
+    plotPoints,   
+    descriptors,
+    identities,
+    traits
+  } = useAppData();
   
   
   console.log('safd',plotPoints, PlotPointTable(plotPoints), "why")
@@ -72,7 +78,7 @@ export default function TurningPointSheet( { themes, plotlines, characters }) {
     
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <PlotPointsInvoked entry={entry} themes={themes} plotPoints={PlotPointTable(plotPoints)}/>
-              <CharactersInvoked entry={entry} />
+              <CharactersInvoked entry={entry} characters={characters} characterTable={CharacterInformationTable(traits, descriptors, identities)} />
           </div>
 
         <TurningPointNotes entry={entry} />

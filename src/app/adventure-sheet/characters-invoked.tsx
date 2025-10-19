@@ -2,17 +2,42 @@
 
 import { useState } from "react";
 import { Modal } from "./modal";
+import Link from "next/link";
+import { chooseFromTable, rollDie } from "@/lib/utils";
+import { useUpdateTurningPointEntry } from "./hooks";
 
 
-export function CharactersInvoked({ entry }) {
-    
+export function CharactersInvoked({ entry, characters, characterTable }) {
+  
+  const [characterData, setCharacterData] = useState(characters ?? []);
+  
   const [modalData, setModalData] = useState<any | null>(null);
+  
+  const updateTurningPointEntry = useUpdateTurningPointEntry()
 
-  const handleOpenModal = (type: string, value: any) => {
-    setModalData({ type, value });
+  const handleOpenModal = (type: string, character: any, id: any) => {
+
+    if(!character) {
+      character = chooseFromTable(rollDie(100), characterData);   
+    }
+
+    setModalData({ type, character, id });
   };
 
   const handleCloseModal = () => setModalData(null);
+  
+  const handleSave = () => {
+    if (!modalData) return;
+    
+    updateTurningPointEntry.mutate({
+      id: modalData?.id,
+      updated: { character_id: modalData?.character?.id }
+    }
+    );
+    setModalData(null);
+  };
+
+
 
   return (
     <>  
@@ -21,7 +46,7 @@ export function CharactersInvoked({ entry }) {
     <div className="space-y-3">
       {Array.from({ length: 5 }).map((_, idx) => {
         const tp = entry.turning_point_entry?.[idx];
-        const value = tp?.character?.name ?? "";
+        const value = tp?.character?.name ?? tp?.character?.default_value ?? "" 
 
         return (
           <div key={idx} className="flex items-center">
@@ -33,7 +58,7 @@ export function CharactersInvoked({ entry }) {
             />
             <button
               className="ml-1 px-2 py-1 border rounded-md text-xs bg-gray-100 hover:bg-gray-200"
-              onClick={() => handleOpenModal("character", tp?.character)}
+              onClick={() => handleOpenModal("character", tp?.character, tp?.id)}
             >
               +
             </button>
@@ -46,8 +71,15 @@ export function CharactersInvoked({ entry }) {
         <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center">
           <div className="bg-white p-6 rounded-lg shadow-xl w-96">
             <h2 className="text-lg font-bold mb-4">Randomized Result</h2>
-            <p><strong>Plot Point:</strong> {}</p>
-            <p><strong>Theme:</strong> {}</p>
+            <p>
+              <strong>Character:</strong>{" "}
+              {modalData?.character?.name ?? modalData?.character?.default_value}
+            </p>
+            <Link
+              href={`/character/${modalData?.character?.id}`}
+              className="text-blue-600 hover:underline">
+                Link to edit character further
+            </Link>
             <div className="flex justify-end gap-2 mt-4">
               <button
                 className="px-4 py-2 bg-gray-300 rounded-lg"
@@ -57,7 +89,7 @@ export function CharactersInvoked({ entry }) {
               </button>
               <button
                 className="px-4 py-2 bg-green-600 text-white rounded-lg"
-                onClick={() => {}}
+                onClick={handleSave}
               >
                 Save
               </button>

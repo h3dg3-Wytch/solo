@@ -17,7 +17,6 @@ export function PlotPointsInvoked({ entry, plotPoints, themes }) {
 
   const updateTurningPointEntry = useUpdateTurningPointEntry()
 
-  const user = useUser();
   
   const handleSave = () => {
     if (!modalData) return;
